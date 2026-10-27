@@ -2,9 +2,7 @@ package marsops.core;
 import marsops.missions.Mission;
 import marsops.emergencies.Emergency;
 // Owner: Shared: frozen after day 1
-// public interface Agent {
-//     // TODO
-// }
+
 public interface Agent {
     public abstract String getId();
     public abstract String getName();

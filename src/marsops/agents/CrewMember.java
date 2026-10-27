@@ -101,6 +101,18 @@ public abstract class CrewMember implements Agent {
         }
     }
 
+        protected boolean hasAnyCapability(Capability[] required) {
+        if (required == null) {
+            return false;
+        }
+        for (Capability c : required) {
+            if (this.hasCapability(c)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public abstract void performDuty();
 }
 

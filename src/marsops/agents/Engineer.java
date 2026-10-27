@@ -1,8 +1,10 @@
 package marsops.agents;
-
+// Owner: Person 2
 import marsops.core.Capability;
 import marsops.missions.Mission;
 import marsops.emergencies.Emergency;
+
+
 public class Engineer extends CrewMember{
     public Engineer(String name, String id, int health, int fatigue, String location) {
         super(name, id, health, fatigue, location);
@@ -24,12 +26,12 @@ public class Engineer extends CrewMember{
     }
     @Override
     public boolean canPerform(Mission mission) {
-        return mission!=null&&this.isAvailable()&&this.hasCapability(Capability.ENGINEERING_REPAIR);
+        return mission != null && this.isAvailable() && hasAnyCapability(mission.getRequiredCapabilities());
     }
 
     @Override
     public boolean canRespond(Emergency emergency) {
-        return emergency != null && this.isAvailable() && this.hasCapability(Capability.ENGINEERING_REPAIR);
+        return emergency != null && this.isAvailable() && hasAnyCapability(emergency.getRequiredCapabilities());
     }
 
     @Override
@@ -37,4 +39,5 @@ public class Engineer extends CrewMember{
         System.out.println("Engineer " + this.name + " is performing structural maintenance");
     }
 }
+
 
