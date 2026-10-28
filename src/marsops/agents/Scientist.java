@@ -21,15 +21,7 @@ public class Scientist extends CrewMember{
 
     @Override
     public boolean canPerform(Mission mission) {
-        if (mission == null || !this.isAvailable()) {
-            return false;
-        }
-        for (Capability required : mission.getRequiredCapabilities()) {
-            if (this.hasCapability(required)) {
-                return true;
-            }
-        }
-        return false;
+        return mission != null &&this.isAvailable() && this.hasCapability(Capability.SCIENTIFIC_RESEARCH);
     }
 
     @Override
