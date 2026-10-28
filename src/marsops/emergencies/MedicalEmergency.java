@@ -24,7 +24,6 @@ public class MedicalEmergency extends Emergency {
             emergencyId,
             medicalFacility != null? medicalFacility.getLocation(): null,
             requiredResources);
-
         if (patient == null|| medicalFacility == null|| healthRestoreAmount <= 0) {
             throw new IllegalArgumentException(
             "Invalid patient, medical facility, or health restore amount");}
@@ -34,9 +33,7 @@ public class MedicalEmergency extends Emergency {
 }
 
     public CrewMember getPatient() {return patient;}
-
     public Facility getMedicalFacility() {return medicalFacility;}
-
     public int getHealthRestoreAmount() {return healthRestoreAmount;}
 
     @Override
@@ -61,7 +58,7 @@ public class MedicalEmergency extends Emergency {
     List<Agent> selectedResponders = new ArrayList<>();
     selectedResponders.add(medicalResponder);
     dispatchResponders(selectedResponders);
-    try {
+try {
     consumeRequiredResources(colony);
     patient.setLocation(medicalFacility.getLocation());
     patient.heal(healthRestoreAmount);
@@ -69,7 +66,4 @@ public class MedicalEmergency extends Emergency {
     finally {
     releaseResponders();}
 }
-
-
-
 }

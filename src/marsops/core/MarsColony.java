@@ -3,9 +3,29 @@ package marsops.core;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import marsops.facilities.Facility;
+import marsops.missions.Mission;
 
 // Owner: Person 3
 public class MarsColony {
+    private String name;
+    private Mission activeMission;
+    private List<Agent> agents = new ArrayList<>();
+    private List<Facility> facilities = new ArrayList<>();
+
+    public MarsColony(String name) {
+        this.name = name;
+        this.activeMission = null;
+    }
+
+    public Mission getActiveMission() {
+        return activeMission;
+    }
+
+    public void setActiveMission(Mission activeMission) {
+        this.activeMission = activeMission;
+    }
+
     // TODO
     public int getTotalResource(ResourceType type) {
     throw new UnsupportedOperationException(
@@ -26,7 +46,6 @@ public boolean consumeResourcesAtomically(
             "consumeResourcesAtomically() is not implemented yet"
     );
 }
-private List<Agent> agents = new ArrayList<>();
     public List<Agent> getAgents() {
         return new ArrayList<>(agents);
     }
@@ -36,4 +55,9 @@ private List<Agent> agents = new ArrayList<>();
             agents.add(agent);
         }
     }
+
+    public void clearActiveMission() {
+        this.activeMission = null;
+    }
 }
+
