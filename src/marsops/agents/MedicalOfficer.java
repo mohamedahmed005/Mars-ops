@@ -8,32 +8,34 @@ public class MedicalOfficer extends CrewMember  {
         super(name, id, health, fatigue, location);
         this.skills.add(Capability.MEDICAL_CARE);
     }
-    public void treat(CrewMember patient) {
-        if (patient == null) {
-            System.out.println("Medical Officer " + this.name + " cannot treat: patient is null");
+    public void treat(CrewMember patient){
+        if(patient==this){
+            System.out.println("Medical officer cannot treat Himself");
+            return;
+        } if (patient == null) {
+            System.out.println("Medical Officer " + this.name + " cannot treat");
             return;
         }
-        if (patient == this) {
-            System.out.println("Medical Officer " + this.name + " cannot treat himself");
-            return;
-        }
+
         if (!this.isAvailable()) {
-            System.out.println("Medical Officer " + this.name + " is not available to treat the patient");
+            System.out.println("Medical Officer " + this.name +" is not available for treat the patient");
             return;
         }
         patient.heal(20);
         this.increaseFatigue(5);
-        System.out.println("Medical Officer " + this.name + " successfully treated " + patient.getName());
+        System.out.println("Medical Officer " + this.name + " successfully treat the patient ");
+
+
     }
 
     @Override
     public boolean canPerform(Mission mission) {
-        return mission != null && this.isAvailable() && hasAnyCapability(mission.getRequiredCapabilities());
+        return mission!=null&&this.isAvailable()&&this.hasCapability(Capability.MEDICAL_CARE);
     }
 
     @Override
     public boolean canRespond(Emergency emergency) {
-        return emergency != null && this.isAvailable() && hasAnyCapability(emergency.getRequiredCapabilities());
+        return emergency != null && this.isAvailable() && this.hasCapability(Capability.MEDICAL_CARE);
     }
 
     @Override
