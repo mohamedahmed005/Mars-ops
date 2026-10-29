@@ -1,6 +1,27 @@
 package marsops.facilities;
 
-// Owner: Person 1
+//Person 1
 public class Laboratory extends Facility {
-    // TODO
+   private boolean onFire;
+
+   public Laboratory(String name ,String location, int capacity){
+
+    super(name, location, capacity);
+    this.onFire=false;
+   }
+
+   public void damageAllEquipment(){
+    for (Equipment e : equipmentList){
+        e.setDamaged(true);
+    }
+    }
+
+   public boolean isOnFire(){
+    return this.onFire;
+   }
+
+   public void setOnFire(boolean onFire){
+    this.onFire =onFire;
+   }
+
 }

@@ -7,7 +7,7 @@ import marsops.emergencies.Emergency;
 import java.util.HashSet;
 import java.util.Set;
 
-public  abstract class RoboticUnit implements Agent {
+public abstract class RoboticUnit implements Agent {
     protected String id;
     protected String model;
     protected String location;
@@ -17,7 +17,10 @@ public  abstract class RoboticUnit implements Agent {
     protected Set<Capability> capabilities;
 
     public RoboticUnit(String id, String model, String location, int batteryLevel, boolean damaged) {
-        if (id== null || id.isBlank() ||model==null||model.isBlank()||  batteryLevel < 0 || batteryLevel > 100 || location == null || location.isBlank()) {
+        if (id == null || id.isBlank()
+                || model == null || model.isBlank()
+                || batteryLevel < 0 || batteryLevel > 100
+                || location == null || location.isBlank()) {
             throw new IllegalArgumentException();
         }
         this.id = id;
@@ -28,13 +31,13 @@ public  abstract class RoboticUnit implements Agent {
         this.available = true;
         this.capabilities = new HashSet<Capability>();
     }
-    
+
     public int getBatteryLevel() {
-        return batteryLevel;
+        return this.batteryLevel;
     }
 
     public boolean isDamaged() {
-        return damaged;
+        return this.damaged;
     }
 
     @Override
@@ -62,7 +65,7 @@ public  abstract class RoboticUnit implements Agent {
 
     @Override
     public boolean isAvailable() {
-        return this.available&&!this.damaged&&this.batteryLevel>0;
+        return this.available && !this.damaged && this.batteryLevel > 0;
     }
 
     @Override
@@ -82,31 +85,26 @@ public  abstract class RoboticUnit implements Agent {
     public abstract boolean canRespond(Emergency emergency);
 
     public void consumeBattery(int amount) {
-        if ( amount > 0) {
-            this.batteryLevel = Math.max(this.batteryLevel-amount, 0);
-            if(this.batteryLevel==0) {
-                this.damaged = true;
-            }
-            }
+        if (amount > 0) {
+            this.batteryLevel = Math.max(this.batteryLevel - amount, 0);
         }
-        public void recharge(int amount) {
-        if ( amount > 0) {
-            this.batteryLevel = Math.min(100, this.batteryLevel + amount);
-            if(this.batteryLevel>0) {
-                this.damaged = false;
-                                    }
-                         }
-        }
+    }
 
-        
-        public void setDamaged(boolean status) {
-        this.damaged = status;
+    public void recharge(int amount) {
+        if (amount > 0) {
+            this.batteryLevel = Math.min(100, this.batteryLevel + amount);
         }
-            public Set<Capability> getCapabilities() {
+    }
+
+    public void setDamaged(boolean status) {
+        this.damaged = status;
+    }
+
+    public Set<Capability> getCapabilities() {
         return this.capabilities;
     }
-    
+
     public String getModel() {
-        return model;
+        return this.model;
     }
-    }
+}

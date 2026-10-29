@@ -1,6 +1,21 @@
 package marsops.facilities;
 
-// Owner: Person 1
+//Person 1
 public class CommunicationStation extends Facility {
-    // TODO
+
+    private boolean signalActive;
+   
+    public CommunicationStation (String name ,String location, int capacity){
+
+        super(name, location, capacity);
+        this.signalActive=true;
+    }
+    
+   public void setSignalActive(boolean signalActive){
+     this.signalActive =signalActive;
+     }
+
+    public boolean isCommAvailable(){
+       return operational && signalActive;
+    }
 }

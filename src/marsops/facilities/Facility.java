@@ -1,38 +1,108 @@
 package marsops.facilities;
 
-// Owner: Person 1
-package marsops.emergencies;
 
+import java.util.Map;
 import marsops.core.ResourceType;
 
-// كلاس مؤقت داخل باكيدج الطوارئ حتى يرسل زميلك كلاس المنشآت النهائي
+import java.util.ArrayList;
+import java.util.EnumMap;
+import java.util.List;
+
+
+//Person 1
+
 public abstract class Facility {
-    protected String name;
-    protected String location;
-    protected boolean operational = true;
+  protected String name;
+  protected String location;
+  protected int capacity;
+  protected boolean operational;
+  protected Map<ResourceType, Integer> resources;
+  protected List<Equipment> equipmentList;
 
-    public Facility(String name, String location) {
-        this.name = name;
-        this.location = location;
-    }
+        protected Facility(String name ,String location, int capacity){
 
-    public String getName() {
-        return name;
-    }
+            if(name ==null || name.trim().isEmpty()){
+                throw new IllegalArgumentException("not valid!");
+            }
+            
 
-    public String getLocation() {
-        return location;
-    }
+            if(location ==null || location.trim().isEmpty()){
+                throw new IllegalArgumentException("not valid!");
+            }
 
-    public boolean isOperational() {
-        return operational;
-    }
+            if(capacity <= 0){
+                throw new IllegalArgumentException("not valid!");
+            }
+            
+            this.name=name;
+            this.location=location;
+            this.capacity=capacity;
+            this.operational=true;
+            this.resources =new EnumMap<>(ResourceType.class);
+            this.equipmentList =new ArrayList<>();
+        }
 
-    public void setOperational(boolean operational) {
-        this.operational = operational;
-    }
+        public String getName(){
+             return this.name;
+        }
 
-    public int deductResource(ResourceType type, int amount) {
-        return amount;
-    }
+        public String getLocation(){
+             return this.location;
+        }
+
+        public int getCapacity(){
+             return this.capacity;
+        }
+
+        public List<Equipment> getEquipmentList(){
+              return this.equipmentList;
+        }
+
+        public int getResourceAmount(ResourceType type){
+            //resources.getOrDefault(key,defaultValue)
+           return this.resources.getOrDefault(type,0);
+        }
+
+        public int deductResource(ResourceType type,int amount){
+            if(amount <=0){
+                return 0;
+            }
+         
+            int available =this.getResourceAmount(type);
+
+            if (amount >available){
+              this.resources.put(type,0);
+              return available;
+            }
+             else {
+                 this.resources.put(type,available-amount);
+                 return amount;
+            }
+        }
+
+        public void addResource(ResourceType type, int amount){
+
+            int available =this.getResourceAmount(type);
+          if(amount >0){
+            this.resources.put(type,available+amount);
+          }
+          else{
+            return ;
+          }
+           
+       }      
+       public boolean isOperational(){
+            return this.operational;
+       }
+       public void setOperational(boolean status){
+         this.operational = status;
+       }
+
+       public void addEquipment(Equipment e){
+
+      if (e ==null){
+         throw new IllegalArgumentException("ERROR");
+       }
+       this.equipmentList.add(e);
+      }
 }
