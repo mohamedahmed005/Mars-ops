@@ -16,7 +16,7 @@ public class StorageFacility extends Facility {
     }
 
      public int getMaxStorageVolume(){
-        return maxStorageVolume;
+        return this.maxStorageVolume;
     }
     
 }
