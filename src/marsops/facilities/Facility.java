@@ -22,52 +22,45 @@ public abstract class Facility {
         protected Facility(String name ,String location, int capacity){
 
             if(name ==null || name.trim().isEmpty()){
-                throw new RuntimeException("not valid!");
-            }
-            else{
-                this.name=name;
+                throw new IllegalArgumentException("not valid!");
             }
             
 
             if(location ==null || location.trim().isEmpty()){
-                throw new RuntimeException("not valid!");
+                throw new IllegalArgumentException("not valid!");
             }
-            else{
-                this.location=location;
-            }
-
 
             if(capacity <= 0){
-                throw new RuntimeException("not valid!");
+                throw new IllegalArgumentException("not valid!");
             }
-            else{
-                this.capacity=capacity;
-            }
-
+            
+            this.name=name;
+            this.location=location;
+            this.capacity=capacity;
             this.operational=true;
             this.resources =new EnumMap<>(ResourceType.class);
             this.equipmentList =new ArrayList<>();
         }
 
         public String getName(){
-             return name;
+             return this.name;
         }
 
         public String getLocation(){
-             return location;
+             return this.location;
         }
 
         public int getCapacity(){
-             return capacity;
+             return this.capacity;
         }
 
         public List<Equipment> getEquipmentList(){
-              return equipmentList;
+              return this.equipmentList;
         }
 
         public int getResourceAmount(ResourceType type){
             //resources.getOrDefault(key,defaultValue)
-           return resources.getOrDefault(type,0);
+           return this.resources.getOrDefault(type,0);
         }
 
         public int deductResource(ResourceType type,int amount){
@@ -75,23 +68,23 @@ public abstract class Facility {
                 return 0;
             }
          
-            int available =getResourceAmount(type);
+            int available =this.getResourceAmount(type);
 
             if (amount >available){
-              resources.put(type,0);
+              this.resources.put(type,0);
               return available;
             }
              else {
-                 resources.put(type,available-amount);
+                 this.resources.put(type,available-amount);
                  return amount;
             }
         }
 
         public void addResource(ResourceType type, int amount){
 
-            int available =getResourceAmount(type);
+            int available =this.getResourceAmount(type);
           if(amount >0){
-            resources.put(type,available+amount);
+            this.resources.put(type,available+amount);
           }
           else{
             return ;
@@ -99,7 +92,7 @@ public abstract class Facility {
            
        }      
        public boolean isOperational(){
-            return operational;
+            return this.operational;
        }
        public void setOperational(boolean status){
          this.operational = status;
@@ -110,6 +103,6 @@ public abstract class Facility {
       if (e ==null){
          throw new IllegalArgumentException("ERROR");
        }
-       equipmentList.add(e);
+       this.equipmentList.add(e);
       }
 }

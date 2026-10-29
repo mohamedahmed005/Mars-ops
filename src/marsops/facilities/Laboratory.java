@@ -17,7 +17,7 @@ public class Laboratory extends Facility {
     }
 
    public boolean isOnFire(){
-    return onFire;
+    return this.onFire;
    }
 
    public void setOnFire(boolean onFire){

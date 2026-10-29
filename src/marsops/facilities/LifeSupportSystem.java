@@ -2,7 +2,7 @@ package marsops.facilities;
 
 // Owner: Person 1
 public class LifeSupportSystem {
-    // TODO
+    
 
     private boolean active;
     private int filtrationEfficiency;
@@ -23,11 +23,11 @@ public class LifeSupportSystem {
     }
 
     public boolean checkIntegrity(){
-    return active && filtrationEfficiency >0;
+    return this.active && this.filtrationEfficiency >0;
     }
 
     public boolean isActive(){
-    return active;
+    return this.active;
     }
 
      public void setActive(boolean active){
@@ -35,7 +35,7 @@ public class LifeSupportSystem {
     }
 
     public int getFiltrationEfficiency(){
-       return filtrationEfficiency;
+       return this.filtrationEfficiency;
     }
 
     public void setFiltrationEfficiency(int value){
