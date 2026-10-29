@@ -1,10 +1,8 @@
 package marsops.agents;
 // Owner: Person 2
-import marsops.core.Capability;
-import marsops.missions.Mission;
-import marsops.emergencies.Emergency;
-
-
+import marsops.core.*;
+import marsops.missions.*;
+import marsops.emergencies.*;
 public class Engineer extends CrewMember{
     public Engineer(String name, String id, int health, int fatigue, String location) {
         super(name, id, health, fatigue, location);
@@ -21,23 +19,21 @@ public class Engineer extends CrewMember{
             System.out.println("Engineer " + this.name +" is not available for repair duties");
             return;
         }
-        this.fatigue = Math.min(100, this.fatigue+5);
+        this.increaseFatigue(5);
         System.out.println("Engineer " + this.name + " successfully repaired equipments for mission: " + mission);
     }
-    @Override
-    public boolean canPerform(Mission mission) {
-        return mission != null && this.isAvailable() && hasAnyCapability(mission.getRequiredCapabilities());
-    }
+@Override
+public boolean canPerform(Mission mission) {
+    return mission != null && this.isAvailable()&& this.hasCapability(Capability.ENGINEERING_REPAIR) && mission instanceof RepairMission;
+}
 
-    @Override
-    public boolean canRespond(Emergency emergency) {
-        return emergency != null && this.isAvailable() && hasAnyCapability(emergency.getRequiredCapabilities());
-    }
+@Override
+public boolean canRespond(Emergency emergency) {
+    return emergency != null && this.isAvailable()&& this.hasCapability(Capability.ENGINEERING_REPAIR)&& (emergency instanceof OxygenLeakEmergency|| emergency instanceof FireEmergency|| emergency instanceof RoverBreakdownEmergency);
+}
 
     @Override
     public void performDuty() {
         System.out.println("Engineer " + this.name + " is performing structural maintenance");
     }
 }
-
-

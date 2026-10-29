@@ -1,6 +1,17 @@
 package marsops.missions;
 
-// Owner: Person 3
+import marsops.core.MissionState;
+
 public class ExplorationMission extends Mission {
-    // TODO
+    private final String targetRegion;
+
+    public ExplorationMission(String missionId, int duration, String targetRegion) {
+        super(missionId, duration);
+        this.targetRegion = targetRegion;
+        this.state = MissionState.IN_PROGRESS;
+    }
+
+    public String getTargetRegion() {
+        return targetRegion;
+    }
 }
