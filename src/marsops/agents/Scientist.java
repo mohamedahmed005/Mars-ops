@@ -1,8 +1,8 @@
 package marsops.agents;
 // Owner: Person 2
-import marsops.core.Capability;
-import marsops.missions.Mission;
-import marsops.emergencies.Emergency;
+import marsops.core.*;
+import marsops.missions.*;
+import marsops.emergencies.*;
 public class Scientist extends CrewMember{
     private String researchSpecialty;
 
@@ -19,15 +19,15 @@ public class Scientist extends CrewMember{
         return this.researchSpecialty;
     }
 
-    @Override
-    public boolean canPerform(Mission mission) {
-        return mission != null &&this.isAvailable() && this.hasCapability(Capability.SCIENTIFIC_RESEARCH);
-    }
+@Override
+public boolean canPerform(Mission mission) {
+    return mission != null && this.isAvailable()&& this.hasCapability(Capability.SCIENTIFIC_RESEARCH)&& (mission instanceof ResearchMission || mission instanceof ExplorationMission);
+}
 
-    @Override
-    public boolean canRespond(Emergency emergency) {
-        return false;
-    }
+@Override
+public boolean canRespond(Emergency emergency) {
+    return false;
+}
 
     @Override
     public void performDuty() {

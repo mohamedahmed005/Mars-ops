@@ -1,11 +1,10 @@
 package marsops.agents;
+// Owner: Person 2
+import marsops.core.*;
+import marsops.missions.*;
+import marsops.emergencies.*;
+import java.util.*;
 
-import marsops.core.Agent;
-import marsops.core.Capability;
-import marsops.missions.Mission;
-import marsops.emergencies.Emergency;
-import java.util.HashSet;
-import java.util.Set;
 
 public abstract class CrewMember implements Agent {
     protected String name;
@@ -17,7 +16,7 @@ public abstract class CrewMember implements Agent {
     protected Set<Capability> skills;
 
     public CrewMember(String name, String id, int health, int fatigue, String location) {
-        if (name == null || name.isBlank() || id == null || health <= 0 || health > 100 || fatigue < 0 || fatigue > 100 || location == null || location.isBlank()) {
+        if (name == null || name.isBlank() || id == null || id.isBlank() || health <= 0 || health > 100 || fatigue < 0 || fatigue > 100 || location == null || location.isBlank()) {
             throw new IllegalArgumentException();
         }
         this.name = name;
@@ -99,18 +98,6 @@ public abstract class CrewMember implements Agent {
         if (amount > 0) {
             this.health = Math.min(100, this.health + amount);
         }
-    }
-
-        protected boolean hasAnyCapability(Capability[] required) {
-        if (required == null) {
-            return false;
-        }
-        for (Capability c : required) {
-            if (this.hasCapability(c)) {
-                return true;
-            }
-        }
-        return false;
     }
 
     public abstract void performDuty();
