@@ -100,6 +100,12 @@ public abstract class CrewMember implements Agent {
         }
     }
 
+    public void takeDamage(int amount) {
+    if (amount > 0) {
+        this.health = Math.max(0, this.health - amount);
+    }
+    }
+
     public abstract void performDuty();
 }
 

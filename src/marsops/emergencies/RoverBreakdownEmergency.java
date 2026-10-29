@@ -34,37 +34,49 @@ public RoverBreakdownEmergency(
         if (colony == null) {
             throw new IllegalArgumentException("Colony cannot be null");}
 
+        // 1. Update rover status and location
         brokenRover.setDamaged(true);
         brokenRover.setLocation(this.location);
-
-        affectedMission.fail("Rover broke down during exploration mission");
-        colony.clearActiveMission();
         brokenRover.setAvailable(false);
-        
+
+        // 2. Update mission status
+        if (affectedMission != null) {
+            affectedMission.fail("Rover broke down during exploration mission");
+            colony.clearActiveMission();}
+
+        // 3. Find an available repair responder
         Agent repairResponder = null;
         for (Agent agent : colony.getAgents()) {
-        if (agent != null && agent != brokenRover && agent.isAvailable()&& agent.canRespond(this)) {
-            repairResponder = agent;
-        break;}}
+            if (agent != null && agent != brokenRover && agent.isAvailable()
+                    && agent.canRespond(this)) {
+                repairResponder = agent;
+                break;}}
 
         if (repairResponder == null) {
             markUnresolved("No available repair responder to fix the broken rover");
             return;}
 
+        // 4. Check required repair resources
         if (!hasSufficientResources(colony)) {
             markUnresolved("Insufficient Spare Parts or Battery Power to repair the rover");
             return;}
 
+        // 5. Dispatch responder and repair the rover
         List<Agent> selectedResponders = new ArrayList<>();
         selectedResponders.add(repairResponder);
 
-        dispatchResponders(selectedResponders);
         try {
+            dispatchResponders(selectedResponders);
+
+            // Consume repair resources
             consumeRequiredResources(colony);
+
+            // Repair the rover
             brokenRover.setDamaged(false);
             brokenRover.setAvailable(true);
+
             markResolved();}
         finally {
-                releaseResponders();}
-        }
+            releaseResponders();}
+    }
 }
