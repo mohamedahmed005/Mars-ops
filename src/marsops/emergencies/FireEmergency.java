@@ -89,5 +89,12 @@ public class FireEmergency extends Emergency {
         releaseResponders();}
     }
 
-
+    @Override
+    public String toString() {
+        return String.format(
+            "%s | Affected Lab: %s | Oxygen Consumed: %d",
+            super.toString(),
+            affectedLab.getName(),
+            oxygenConsumedByFire);
+}
 }

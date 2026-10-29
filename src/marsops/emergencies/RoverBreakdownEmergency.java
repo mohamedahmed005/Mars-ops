@@ -79,4 +79,13 @@ public RoverBreakdownEmergency(
         finally {
             releaseResponders();}
     }
+
+    @Override
+    public String toString() {
+        return String.format(
+            "%s | Broken Rover: %s | Affected Mission: %s",
+            super.toString(),
+            brokenRover.getName(),
+            affectedMission != null ? affectedMission.toString() : "None");
+}
 }

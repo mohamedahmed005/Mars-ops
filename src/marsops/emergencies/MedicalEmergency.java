@@ -66,4 +66,13 @@ try {
     finally {
     releaseResponders();}
 }
+    @Override
+    public String toString() {
+        return String.format(
+            "%s | Patient: %s | Medical Facility: %s | Health Restore: %d",
+            super.toString(),
+            patient.getName(),
+            medicalFacility.getName(),
+            healthRestoreAmount);
+}
 }
