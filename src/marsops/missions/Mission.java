@@ -23,8 +23,14 @@ public abstract class Mission {
     private boolean agentsReserved = false;
 
     public Mission(String missionId, int duration) {
-        this.missionId = missionId;
-        this.duration = duration;
+        if (missionId == null || missionId.isBlank()) {
+        throw new IllegalArgumentException("Mission id cannot be null or blank");
+    }
+    if (duration <= 0) {
+        throw new IllegalArgumentException("Mission duration must be a positive number");
+    }
+    this.missionId = missionId.trim();
+    this.duration = duration;
         this.elapsedTime = 0;
         this.state = MissionState.ASSIGNED;
         this.assignedAgents = new ArrayList<>();
@@ -40,7 +46,10 @@ public abstract class Mission {
     }
 
     public void setState(MissionState state) {
-        this.state = state;
+         if (state == null) {
+        throw new IllegalArgumentException("Mission state cannot be null");
+    }
+    this.state = state;
     }
 
     public String getFailureReason() {
@@ -73,8 +82,16 @@ public abstract class Mission {
     }
 
     public void addRequiredResource(ResourceType type, int amount) {
-        requiredResources.put(type, amount);
+        public void addRequiredResource(ResourceType type, int amount) {
+    if (type == null) {
+        throw new IllegalArgumentException("Resource type cannot be null");
     }
+    if (amount < 0) {
+        throw new IllegalArgumentException("Resource amount cannot be negative");
+    }
+    requiredResources.put(type, amount);
+}
+    
 
     
     public abstract boolean validateRequirements(MarsColony colony);
@@ -118,11 +135,15 @@ public abstract class Mission {
     }
     public void onEnvironmentChange(EnvironmentCondition env) { }
     public void fail(String reason) {
+
         if (this.state == MissionState.COMPLETED || this.state == MissionState.FAILED) {
             return;
         }
         this.state = MissionState.FAILED;
-        this.failureReason = reason;
+                if (reason == null || reason.isBlank()) {
+    reason = "No reason was given";
+}
+this.failureReason = reason.trim();
         if (agentsReserved) {
             releaseAgents();
         }
