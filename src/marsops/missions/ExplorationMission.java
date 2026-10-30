@@ -13,7 +13,10 @@ public class ExplorationMission extends Mission {
 
     public ExplorationMission(String missionId, int duration, String targetRegion) {
         super(missionId, duration);
-        this.targetRegion = targetRegion;
+        if (targetRegion == null || targetRegion.isBlank()) {
+    throw new IllegalArgumentException("Target region cannot be null or blank");
+}
+this.targetRegion = targetRegion.trim();
     }
 
     public String getTargetRegion() {
