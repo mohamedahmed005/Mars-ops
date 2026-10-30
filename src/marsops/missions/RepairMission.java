@@ -14,12 +14,20 @@ import marsops.facilities.Equipment;
 
 
 public class RepairMission extends Mission {
+        private final int spare_parts;
+        private Equipment targetEquipment;
+        
+        public RepairMission(int spare_parts, String missionId, int duration) {
+        super(missionId, duration);
+        this.spare_parts = spare_parts;
+        addRequiredResource(ResourceType.SPARE_PARTS, spare_parts);
+    }
+    
 
     public int getSpare_parts() {
         return spare_parts;
     }
-    private final int spare_parts;
-    private Equipment targetEquipment;
+
 
     public Equipment getTargetEquipment() {
         return targetEquipment;
@@ -29,12 +37,7 @@ public class RepairMission extends Mission {
         this.targetEquipment = targetEquipment;
     }
 
-    public RepairMission(int spare_parts, String missionId, int duration) {
-        super(missionId, duration);
-        this.spare_parts = spare_parts;
-        addRequiredResource(ResourceType.SPARE_PARTS, spare_parts);
-    }
-    
+
     
     @Override
     public boolean validateRequirements(MarsColony colony) {

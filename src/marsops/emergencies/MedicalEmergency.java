@@ -45,7 +45,7 @@ public class MedicalEmergency extends Emergency {
         return;}
     Agent medicalResponder = null;
     for (Agent agent : colony.getAgents()) {
-        if (agent != null&& agent.isAvailable()&& agent.canRespond(this)) {
+        if (agent != null && agent != patient && agent.isAvailable() && agent.canRespond(this)) {
             medicalResponder = agent;
                 break;}}
         if (medicalResponder == null) {

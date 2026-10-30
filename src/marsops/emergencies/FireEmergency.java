@@ -80,7 +80,7 @@ public class FireEmergency extends Emergency {
     consumeRequiredResources(colony);
     // Treat injured crew
     for (CrewMember patient : injuredCrew) {
-        patient.heal(25);}
+        patient.heal(15);}
     // Finish handling the fire
     affectedLab.setOnFire(false);
     affectedLab.setOperational(true);

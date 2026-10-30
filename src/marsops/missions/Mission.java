@@ -18,9 +18,9 @@ public abstract class Mission {
     protected int elapsedTime;
     protected String failureReason;
     protected List<Agent> assignedAgents;
-    protected Facility targetFacility;                       
-    protected Map<ResourceType, Integer> requiredResources;  
-    private boolean agentsReserved = false;                  
+    protected Facility targetFacility;
+    protected Map<ResourceType, Integer> requiredResources;
+    private boolean agentsReserved = false;
 
     public Mission(String missionId, int duration) {
         this.missionId = missionId;
@@ -116,7 +116,6 @@ public abstract class Mission {
             complete();
         }
     }
-
     public void onEnvironmentChange(EnvironmentCondition env) { }
     public void fail(String reason) {
         if (this.state == MissionState.COMPLETED || this.state == MissionState.FAILED) {

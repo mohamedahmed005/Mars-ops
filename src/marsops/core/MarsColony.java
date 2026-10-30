@@ -119,9 +119,7 @@ public boolean consumeResourcesAtomically(
         emergency.handle(this);}
 
     
-public boolean submitMission(
-        Mission mission,
-        List<Agent> assignedAgents) {
+    public boolean submitMission(Mission mission,List<Agent> assignedAgents) {
         if (mission == null) {
             throw new IllegalArgumentException("Mission cannot be null");}
         missionHistory.add(mission);

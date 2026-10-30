@@ -42,7 +42,8 @@ public RoverBreakdownEmergency(
         // 2. Update mission status
         if (affectedMission != null) {
             affectedMission.fail("Rover broke down during exploration mission");
-            colony.clearActiveMission();}
+            if (colony.getActiveMission() == affectedMission) {
+                colony.clearActiveMission();}}
 
         // 3. Find an available repair responder
         Agent repairResponder = null;
