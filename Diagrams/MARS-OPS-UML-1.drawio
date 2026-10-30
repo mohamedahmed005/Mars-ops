@@ -346,11 +346,6 @@
         <mxCell id="cd113" parent="cd110" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="+ handle(colony: MarsColony): void" vertex="1">
           <mxGeometry height="24" width="239" y="58" as="geometry" />
         </mxCell>
-        <mxCell id="ZzslTFS6IRnlIALeCJax-2" edge="1" parent="1" source="cd114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="2349.027777777778" y="1219.8055555555557" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="cd114" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;startSize=40;horizontal=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;swimlaneFillColor=default;marginBottom=0;fontSize=12;" value="«abstract»&lt;br&gt;&lt;b&gt;&lt;i&gt;Emergency&lt;/i&gt;&lt;/b&gt;" vertex="1">
           <mxGeometry height="300" width="320" x="2189" y="1230" as="geometry" />
         </mxCell>
@@ -590,6 +585,11 @@
         <mxCell id="cd155" connectable="0" parent="cd153" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;" value="1" vertex="1">
           <mxGeometry relative="1" x="1" as="geometry">
             <mxPoint x="8" y="-16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZzslTFS6IRnlIALeCJax-2" edge="1" parent="1" source="cd114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2349.027777777778" y="1219.8055555555557" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
