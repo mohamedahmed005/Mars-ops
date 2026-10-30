@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" pages="7">
   <diagram id="cd" name="1 Class Diagram">
-    <mxGraphModel dx="3057" dy="2282" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="3600" pageHeight="2400" background="light-dark(#FFFFFF,#004C99)" math="0" shadow="0">
+    <mxGraphModel dx="4378" dy="2722" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="3600" pageHeight="2400" background="light-dark(#FFFFFF,#000000)" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -601,89 +601,89 @@
     </mxGraphModel>
   </diagram>
   <diagram id="od" name="2 Object Diagram">
-    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="3600" pageHeight="2400" math="0" shadow="0">
+    <mxGraphModel dx="2170" dy="1667" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="3600" pageHeight="2400" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="od2" value="colony1 : MarsColony" style="swimlane;fontStyle=5;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="520" y="0" width="300" height="66" as="geometry" />
+        <mxCell id="od2" parent="1" style="swimlane;fontStyle=5;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;fontSize=12;" value="colony1 : MarsColony" vertex="1">
+          <mxGeometry height="66" width="300" x="520" as="geometry" />
         </mxCell>
-        <mxCell id="od3" value="name = &quot;Ares Base Alpha&quot;&lt;br&gt;environment = NORMAL" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" vertex="1" parent="od2">
-          <mxGeometry x="0" y="26" width="300" height="40" as="geometry" />
+        <mxCell id="od3" parent="od2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="name = &quot;Ares Base Alpha&quot;&lt;br&gt;environment = NORMAL" vertex="1">
+          <mxGeometry height="40" width="300" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="od4" value="habitatA : Habitat" style="swimlane;fontStyle=5;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="0" y="230" width="340" height="114" as="geometry" />
+        <mxCell id="od4" parent="1" style="swimlane;fontStyle=5;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;fontSize=12;" value="habitatA : Habitat" vertex="1">
+          <mxGeometry height="114" width="340" y="230" as="geometry" />
         </mxCell>
-        <mxCell id="od5" value="name = &quot;Habitat A&quot;&lt;br&gt;location = &quot;Sector 1&quot;&lt;br&gt;capacity = 10&lt;br&gt;operational = true&lt;br&gt;resources = [OXYGEN: 300, WATER: 200, FOOD: 150]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" vertex="1" parent="od4">
-          <mxGeometry x="0" y="26" width="340" height="88" as="geometry" />
+        <mxCell id="od5" parent="od4" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="name = &quot;Habitat A&quot;&lt;br&gt;location = &quot;Sector 1&quot;&lt;br&gt;capacity = 10&lt;br&gt;operational = true&lt;br&gt;resources = [OXYGEN: 300, WATER: 200, FOOD: 150]" vertex="1">
+          <mxGeometry height="88" width="340" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="od6" value="lifeSupport1 : LifeSupportSystem" style="swimlane;fontStyle=5;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="0" y="470" width="340" height="66" as="geometry" />
+        <mxCell id="od6" parent="1" style="swimlane;fontStyle=5;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;fontSize=12;" value="lifeSupport1 : LifeSupportSystem" vertex="1">
+          <mxGeometry height="66" width="340" y="470" as="geometry" />
         </mxCell>
-        <mxCell id="od7" value="active = true&lt;br&gt;filtrationEfficiency = 98" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" vertex="1" parent="od6">
-          <mxGeometry x="0" y="26" width="340" height="40" as="geometry" />
+        <mxCell id="od7" parent="od6" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="active = true&lt;br&gt;filtrationEfficiency = 98" vertex="1">
+          <mxGeometry height="40" width="340" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="od8" value="storage1 : StorageFacility" style="swimlane;fontStyle=5;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="380" y="230" width="400" height="114" as="geometry" />
+        <mxCell id="od8" parent="1" style="swimlane;fontStyle=5;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;fontSize=12;" value="storage1 : StorageFacility" vertex="1">
+          <mxGeometry height="114" width="400" x="380" y="230" as="geometry" />
         </mxCell>
-        <mxCell id="od9" value="name = &quot;Main Storage&quot;&lt;br&gt;location = &quot;Sector 2&quot;&lt;br&gt;capacity = 100&lt;br&gt;operational = true&lt;br&gt;resources = [OXYGEN: 200, SPARE_PARTS: 25, BATTERY_POWER: 100]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" vertex="1" parent="od8">
-          <mxGeometry x="0" y="26" width="400" height="88" as="geometry" />
+        <mxCell id="od9" parent="od8" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="name = &quot;Main Storage&quot;&lt;br&gt;location = &quot;Sector 2&quot;&lt;br&gt;capacity = 100&lt;br&gt;operational = true&lt;br&gt;resources = [OXYGEN: 200, SPARE_PARTS: 25, BATTERY_POWER: 100]" vertex="1">
+          <mxGeometry height="88" width="400" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="od10" value="scientist1 : Scientist" style="swimlane;fontStyle=5;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;swimlaneFillColor=default;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="830" y="230" width="260" height="146" as="geometry" />
+        <mxCell id="od10" parent="1" style="swimlane;fontStyle=5;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;swimlaneFillColor=default;fontSize=12;" value="scientist1 : Scientist" vertex="1">
+          <mxGeometry height="146" width="260" x="830" y="230" as="geometry" />
         </mxCell>
-        <mxCell id="od11" value="id = &quot;C-101&quot;&lt;br&gt;name = &quot;Dr. Sarah Chen&quot;&lt;br&gt;health = 100&lt;br&gt;fatigue = 10&lt;br&gt;location = &quot;Martian Surface&quot;&lt;br&gt;available = false&lt;br&gt;researchSpecialty = &quot;Astrobiology&quot;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" vertex="1" parent="od10">
-          <mxGeometry x="0" y="26" width="260" height="120" as="geometry" />
+        <mxCell id="od11" parent="od10" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="id = &quot;C-101&quot;&lt;br&gt;name = &quot;Dr. Sarah Chen&quot;&lt;br&gt;health = 100&lt;br&gt;fatigue = 10&lt;br&gt;location = &quot;Martian Surface&quot;&lt;br&gt;available = false&lt;br&gt;researchSpecialty = &quot;Astrobiology&quot;" vertex="1">
+          <mxGeometry height="120" width="260" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="od12" value="eng1 : Engineer" style="swimlane;fontStyle=5;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;swimlaneFillColor=default;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="1130" y="230" width="230" height="130" as="geometry" />
+        <mxCell id="od12" parent="1" style="swimlane;fontStyle=5;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;swimlaneFillColor=default;fontSize=12;" value="eng1 : Engineer" vertex="1">
+          <mxGeometry height="130" width="230" x="1130" y="230" as="geometry" />
         </mxCell>
-        <mxCell id="od13" value="id = &quot;C-102&quot;&lt;br&gt;name = &quot;Alex Rivera&quot;&lt;br&gt;health = 100&lt;br&gt;fatigue = 5&lt;br&gt;location = &quot;Habitat A&quot;&lt;br&gt;available = true" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" vertex="1" parent="od12">
-          <mxGeometry x="0" y="26" width="230" height="104" as="geometry" />
+        <mxCell id="od13" parent="od12" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="id = &quot;C-102&quot;&lt;br&gt;name = &quot;Alex Rivera&quot;&lt;br&gt;health = 100&lt;br&gt;fatigue = 5&lt;br&gt;location = &quot;Habitat A&quot;&lt;br&gt;available = true" vertex="1">
+          <mxGeometry height="104" width="230" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="od14" value="rover1 : ExplorationRover" style="swimlane;fontStyle=5;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;swimlaneFillColor=default;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="1400" y="230" width="260" height="130" as="geometry" />
+        <mxCell id="od14" parent="1" style="swimlane;fontStyle=5;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;swimlaneFillColor=default;fontSize=12;" value="rover1 : ExplorationRover" vertex="1">
+          <mxGeometry height="130" width="260" x="1400" y="230" as="geometry" />
         </mxCell>
-        <mxCell id="od15" value="id = &quot;R-201&quot;&lt;br&gt;model = &quot;Pathfinder X&quot;&lt;br&gt;batteryLevel = 85&lt;br&gt;damaged = false&lt;br&gt;location = &quot;Martian Surface&quot;&lt;br&gt;available = false" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" vertex="1" parent="od14">
-          <mxGeometry x="0" y="26" width="260" height="104" as="geometry" />
+        <mxCell id="od15" parent="od14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="id = &quot;R-201&quot;&lt;br&gt;model = &quot;Pathfinder X&quot;&lt;br&gt;batteryLevel = 85&lt;br&gt;damaged = false&lt;br&gt;location = &quot;Martian Surface&quot;&lt;br&gt;available = false" vertex="1">
+          <mxGeometry height="104" width="260" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="od16" value="repairBot1 : RepairRobot" style="swimlane;fontStyle=5;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;swimlaneFillColor=default;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="1700" y="230" width="260" height="130" as="geometry" />
+        <mxCell id="od16" parent="1" style="swimlane;fontStyle=5;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;swimlaneFillColor=default;fontSize=12;" value="repairBot1 : RepairRobot" vertex="1">
+          <mxGeometry height="130" width="260" x="1700" y="230" as="geometry" />
         </mxCell>
-        <mxCell id="od17" value="id = &quot;R-202&quot;&lt;br&gt;model = &quot;FixIt-9000&quot;&lt;br&gt;batteryLevel = 100&lt;br&gt;damaged = false&lt;br&gt;location = &quot;Habitat A&quot;&lt;br&gt;available = true" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" vertex="1" parent="od16">
-          <mxGeometry x="0" y="26" width="260" height="104" as="geometry" />
+        <mxCell id="od17" parent="od16" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="id = &quot;R-202&quot;&lt;br&gt;model = &quot;FixIt-9000&quot;&lt;br&gt;batteryLevel = 100&lt;br&gt;damaged = false&lt;br&gt;location = &quot;Habitat A&quot;&lt;br&gt;available = true" vertex="1">
+          <mxGeometry height="104" width="260" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="od18" value="expMission1 : ExplorationMission" style="swimlane;fontStyle=5;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;swimlaneFillColor=default;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="1000" y="560" width="320" height="130" as="geometry" />
+        <mxCell id="od18" parent="1" style="swimlane;fontStyle=5;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;swimlaneFillColor=default;fontSize=12;" value="expMission1 : ExplorationMission" vertex="1">
+          <mxGeometry height="130" width="320" x="1000" y="560" as="geometry" />
         </mxCell>
-        <mxCell id="od19" value="missionId = &quot;M-001&quot;&lt;br&gt;state = IN_PROGRESS&lt;br&gt;duration = 3&lt;br&gt;elapsedTime = 1&lt;br&gt;targetRegion = &quot;Valles Marineris&quot;&lt;br&gt;failureReason = null" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" vertex="1" parent="od18">
-          <mxGeometry x="0" y="26" width="320" height="104" as="geometry" />
+        <mxCell id="od19" parent="od18" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="missionId = &quot;M-001&quot;&lt;br&gt;state = IN_PROGRESS&lt;br&gt;duration = 3&lt;br&gt;elapsedTime = 1&lt;br&gt;targetRegion = &quot;Valles Marineris&quot;&lt;br&gt;failureReason = null" vertex="1">
+          <mxGeometry height="104" width="320" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="od20" value="spectrometer1 : Equipment" style="swimlane;fontStyle=5;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;swimlaneFillColor=default;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="1500" y="560" width="300" height="82" as="geometry" />
+        <mxCell id="od20" parent="1" style="swimlane;fontStyle=5;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;swimlaneFillColor=default;fontSize=12;" value="spectrometer1 : Equipment" vertex="1">
+          <mxGeometry height="82" width="300" x="1500" y="560" as="geometry" />
         </mxCell>
-        <mxCell id="od21" value="name = &quot;Soil Spectrometer&quot;&lt;br&gt;providedCapability = SCIENTIFIC_RESEARCH&lt;br&gt;damaged = false" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" vertex="1" parent="od20">
-          <mxGeometry x="0" y="26" width="300" height="56" as="geometry" />
+        <mxCell id="od21" parent="od20" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="name = &quot;Soil Spectrometer&quot;&lt;br&gt;providedCapability = SCIENTIFIC_RESEARCH&lt;br&gt;damaged = false" vertex="1">
+          <mxGeometry height="56" width="300" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="od22" value="facilities" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=diamondThin;endFill=0;endSize=18;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="od4" target="od2">
+        <mxCell id="od22" edge="1" parent="1" source="od4" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=diamondThin;endFill=0;endSize=18;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="od2" value="facilities">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="od23" value="facilities" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=diamondThin;endFill=0;endSize=18;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="od8" target="od2">
+        <mxCell id="od23" edge="1" parent="1" source="od8" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=diamondThin;endFill=0;endSize=18;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="od2" value="facilities">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="od24" value="agents" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=diamondThin;endFill=0;endSize=18;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="od10" target="od2">
+        <mxCell id="od24" edge="1" parent="1" source="od10" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=diamondThin;endFill=0;endSize=18;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="od2" value="agents">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="od25" value="agents" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=diamondThin;endFill=0;endSize=18;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="od12" target="od2">
+        <mxCell id="od25" edge="1" parent="1" source="od12" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=diamondThin;endFill=0;endSize=18;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="od2" value="agents">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="od26" value="agents" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=diamondThin;endFill=0;endSize=18;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="od14" target="od2">
+        <mxCell id="od26" edge="1" parent="1" source="od14" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=diamondThin;endFill=0;endSize=18;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="od2" value="agents">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="od27" value="agents" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=diamondThin;endFill=0;endSize=18;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="od16" target="od2">
+        <mxCell id="od27" edge="1" parent="1" source="od16" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=diamondThin;endFill=0;endSize=18;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="od2" value="agents">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="od28" value="activeMission" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=open;endFill=0;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="od2" target="od18">
+        <mxCell id="od28" edge="1" parent="1" source="od2" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=open;endFill=0;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="od18" value="activeMission">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="2050" y="33" />
@@ -691,20 +691,20 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="od29" value="lifeSupport" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=diamondThin;endFill=1;endSize=18;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="od6" target="od4">
+        <mxCell id="od29" edge="1" parent="1" source="od6" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=diamondThin;endFill=1;endSize=18;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="od4" value="lifeSupport">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="od30" value="assignedAgents" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=open;endFill=0;exitX=0.3;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="od18" target="od10">
+        <mxCell id="od30" edge="1" parent="1" source="od18" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=open;endFill=0;exitX=0.3;exitY=0;entryX=0.5;entryY=1;" target="od10" value="assignedAgents">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="od31" value="assignedAgents" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=open;endFill=0;exitX=0.7;exitY=0;entryX=0.3;entryY=1;" edge="1" parent="1" source="od18" target="od14">
+        <mxCell id="od31" edge="1" parent="1" source="od18" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=open;endFill=0;exitX=0.7;exitY=0;entryX=0.3;entryY=1;" target="od14" value="assignedAgents">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="od32" value="cargo" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=diamondThin;endFill=0;endSize=18;exitX=0.5;exitY=0;entryX=0.8;entryY=1;" edge="1" parent="1" source="od20" target="od14">
+        <mxCell id="od32" edge="1" parent="1" source="od20" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=diamondThin;endFill=0;endSize=18;exitX=0.5;exitY=0;entryX=0.8;entryY=1;" target="od14" value="cargo">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="od33" value="&lt;b style=&quot;font-size:22px&quot;&gt;MARS-OPS: Object Diagram&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:12px&quot;&gt;Snapshot of colony1 (Ares Base Alpha) during mission M-001&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=top;" vertex="1" parent="1">
-          <mxGeometry x="0" y="-90" width="1000" height="50" as="geometry" />
+        <mxCell id="od33" parent="1" style="text;html=1;align=left;verticalAlign=top;" value="&lt;b style=&quot;font-size:22px&quot;&gt;MARS-OPS: Object Diagram&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:12px&quot;&gt;Snapshot of colony1 (Ares Base Alpha) during mission M-001&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="1000" y="-90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
