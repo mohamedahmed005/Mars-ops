@@ -1,9 +1,9 @@
 package marsops.agents;
 // Owner: Person 2
-import marsops.core.*;
-import marsops.missions.*;
-import marsops.emergencies.*;
 import java.util.*;
+import marsops.core.*;
+import marsops.emergencies.*;
+import marsops.missions.*;
 
 
 public abstract class CrewMember implements Agent {
@@ -25,7 +25,7 @@ public abstract class CrewMember implements Agent {
         this.fatigue = fatigue;
         this.location = location;
         this.available = true;
-        this.skills = new HashSet<Capability>();
+        this.skills = EnumSet.noneOf(Capability.class);
     }
 
 

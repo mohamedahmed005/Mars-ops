@@ -13,7 +13,7 @@ import marsops.core.ResourceType;
 
 public class RescueMission extends Mission {
 
-    private Agent strandedEntity;
+    private final Agent strandedEntity;
     private String rescueBase;
 
     public RescueMission(Agent strandedEntity, String missionId, int duration) {
@@ -55,7 +55,6 @@ public class RescueMission extends Mission {
             return false;
         }
 
-     
         if (assignedAgents.isEmpty()) {
             fail("No agents were assigned to the mission.");
             return false;
@@ -136,6 +135,15 @@ public class RescueMission extends Mission {
         }
     }
     
+    @Override
+    public void onEnvironmentChange(EnvironmentCondition env) {
+        if (state != MissionState.IN_PROGRESS) return;
+        if (env == EnvironmentCondition.COMMUNICATION_DISRUPTION) {
+            fail("communication disruption: communication for rescue failed");
+        } else if (env == EnvironmentCondition.DUST_STORM && usesSurfaceVehicle()) {
+            fail("Dust storm: active rover missions fail.");
+        }
+    }
     @Override
     public void advanceOneTimeUnit(EnvironmentCondition env) {
         if (state == MissionState.IN_PROGRESS) {

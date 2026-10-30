@@ -27,7 +27,7 @@ public class ExplorationMission extends Mission {
             return false;
         }
 
-     
+    
         if (assignedAgents.isEmpty()) {
             fail("No agents were assigned to the mission.");
             return false;
@@ -82,7 +82,12 @@ public class ExplorationMission extends Mission {
         }
     }
 
-   
+    @Override
+    public void onEnvironmentChange(EnvironmentCondition env) {
+            if (env == EnvironmentCondition.DUST_STORM && state == MissionState.IN_PROGRESS) {
+            fail("Dust storm: active rover missions fail.");
+        }
+    }
     @Override
     public void advanceOneTimeUnit(EnvironmentCondition env) {
         if (env == EnvironmentCondition.DUST_STORM && state == MissionState.IN_PROGRESS) {

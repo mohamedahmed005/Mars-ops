@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import marsops.emergencies.Emergency;
+import marsops.facilities.CommunicationStation;
 import marsops.facilities.Facility;
 import marsops.missions.Mission;
 
@@ -33,6 +34,16 @@ public class MarsColony {
     public List<Facility> getFacilities() {return new ArrayList<>(facilities);}
     public List<Mission> getMissionHistory() {return new ArrayList<>(missionHistory);}
     public List<Emergency> getEmergencies() {return new ArrayList<>(emergencies);}
+
+    public boolean hasActiveCommunicationStation() {
+        if (environment == EnvironmentCondition.COMMUNICATION_DISRUPTION) {
+            return false;}
+        for (Facility facility : facilities) {
+            if (facility instanceof CommunicationStation && facility.isOperational()) {
+                return true;}
+        }
+        return false;
+    }
     public int getTotalResource(ResourceType type) {
         if (type == null) {
             return 0;}
@@ -130,6 +141,19 @@ public boolean submitMission(
             return false;}
         }
     mission.assignAgents(assignedAgents);
+
+    // Mission-specific checks (environment, equipment, vehicle, resources).
+    // validateRequirements() already calls mission.fail(reason) when it rejects.
+    if (!mission.validateRequirements(this)) {
+        return false;}
+
+    // All-or-nothing consumption of the mission's resources.
+    if (!consumeResourcesAtomically(mission.getRequiredResources())) {
+        mission.fail("Insufficient resources to start the mission");
+        return false;}
+
+    // Agents stay busy until the mission completes or fails.
+    mission.reserveAgents();
     this.activeMission = mission;
     return true;}
 

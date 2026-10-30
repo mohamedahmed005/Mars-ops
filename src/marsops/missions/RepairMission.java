@@ -18,7 +18,7 @@ public class RepairMission extends Mission {
     public int getSpare_parts() {
         return spare_parts;
     }
-    private int spare_parts;
+    private final int spare_parts;
     private Equipment targetEquipment;
 
     public Equipment getTargetEquipment() {

@@ -1,12 +1,11 @@
 package marsops.facilities;
 
 
-import java.util.Map;
-import marsops.core.ResourceType;
-
 import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.List;
+import java.util.Map;
+import marsops.core.ResourceType;
 
 
 //Person 1
@@ -81,16 +80,10 @@ public abstract class Facility {
         }
 
         public void addResource(ResourceType type, int amount){
-
             int available =this.getResourceAmount(type);
           if(amount >0){
-            this.resources.put(type,available+amount);
-          }
-          else{
-            return ;
-          }
-           
-       }      
+            this.resources.put(type,available+amount);}
+       }
        public boolean isOperational(){
             return this.operational;
        }

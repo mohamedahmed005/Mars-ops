@@ -80,7 +80,7 @@ public abstract class Mission {
     public abstract boolean validateRequirements(MarsColony colony);
 
     
-    public void assign(List<Agent> agents) {
+    public void assignAgents(List<Agent> agents) {
         if (agents != null) {
             for (Agent agent : agents) {
                 this.assignedAgents.add(agent);
@@ -117,7 +117,7 @@ public abstract class Mission {
         }
     }
 
-    
+    public void onEnvironmentChange(EnvironmentCondition env) { }
     public void fail(String reason) {
         if (this.state == MissionState.COMPLETED || this.state == MissionState.FAILED) {
             return;
@@ -135,6 +135,11 @@ public abstract class Mission {
         releaseAgents();
     }
 
+    @Override
+    public String toString() {
+        return missionId + " [" + state + "]"
+                + (failureReason != null ? " (reason: " + failureReason + ")" : "");
+    }
     public void releaseAgents() {
         for (Agent agent : assignedAgents) {
             if (agent != null) {

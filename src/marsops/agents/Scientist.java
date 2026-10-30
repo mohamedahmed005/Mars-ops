@@ -1,8 +1,8 @@
 package marsops.agents;
 // Owner: Person 2
 import marsops.core.*;
-import marsops.missions.*;
 import marsops.emergencies.*;
+import marsops.missions.*;
 public class Scientist extends CrewMember{
     private String researchSpecialty;
 

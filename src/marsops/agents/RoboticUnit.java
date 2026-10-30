@@ -1,11 +1,11 @@
 package marsops.agents;
 // Owner: Person 2
+import java.util.EnumSet;
+import java.util.Set;
 import marsops.core.Agent;
 import marsops.core.Capability;
-import marsops.missions.Mission;
 import marsops.emergencies.Emergency;
-import java.util.HashSet;
-import java.util.Set;
+import marsops.missions.Mission;
 
 public abstract class RoboticUnit implements Agent {
     protected String id;
@@ -29,7 +29,7 @@ public abstract class RoboticUnit implements Agent {
         this.batteryLevel = batteryLevel;
         this.damaged = damaged;
         this.available = true;
-        this.capabilities = new HashSet<Capability>();
+        this.capabilities = EnumSet.noneOf(Capability.class);
     }
 
     public int getBatteryLevel() {

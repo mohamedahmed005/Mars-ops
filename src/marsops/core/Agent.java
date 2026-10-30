@@ -1,6 +1,6 @@
 package marsops.core;
-import marsops.missions.Mission;
 import marsops.emergencies.Emergency;
+import marsops.missions.Mission;
 // Owner: Shared: frozen after day 1
 
 public interface Agent {

@@ -118,7 +118,7 @@ public abstract class Emergency {
                         : "")
         );
     }
-}        
+}
 
 
 

@@ -1,8 +1,8 @@
 package marsops.agents;
 // Owner: Person 2
 import marsops.core.*;
-import marsops.missions.*;
 import marsops.emergencies.*;
+import marsops.missions.*;
 public class Engineer extends CrewMember{
     public Engineer(String name, String id, int health, int fatigue, String location) {
         super(name, id, health, fatigue, location);
