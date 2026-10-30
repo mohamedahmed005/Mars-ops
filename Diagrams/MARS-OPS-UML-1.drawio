@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" pages="7">
   <diagram id="cd" name="1 Class Diagram">
-    <mxGraphModel dx="867" dy="839" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="3600" pageHeight="2400" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="964" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="3600" pageHeight="2400" background="light-dark(#FFFFFF,#004C99)" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -143,7 +143,7 @@
           <mxGeometry height="152" width="283" y="56" as="geometry" />
         </mxCell>
         <mxCell id="cd48" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;marginBottom=0;fontSize=12;" value="&lt;b&gt;Habitat&lt;/b&gt;" vertex="1">
-          <mxGeometry height="98" width="233" x="1804" y="680" as="geometry" />
+          <mxGeometry height="100" width="233" x="1804" y="680" as="geometry" />
         </mxCell>
         <mxCell id="cd49" parent="cd48" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="- lifeSupport: LifeSupportSystem" vertex="1">
           <mxGeometry height="24" width="233" y="26" as="geometry" />
@@ -151,11 +151,11 @@
         <mxCell id="cd50" parent="cd48" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;html=1;" value="" vertex="1">
           <mxGeometry height="8" width="233" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="cd51" parent="cd48" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="+ getOxygenLevel(): int&lt;br&gt;+ reduceOxygen(amount: int): void" vertex="1">
-          <mxGeometry height="40" width="233" y="58" as="geometry" />
+        <mxCell id="cd51" parent="cd48" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="+ getOxygenLevel(): int&lt;br&gt;+ reduceOxygen(amount: int): void&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(210, 168, 255), rgb(255, 255, 255));&quot;&gt;&lt;font&gt;+&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;getLifeSupport&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;():&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;LifeSupportSystem&lt;/span&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="233" y="50" as="geometry" />
         </mxCell>
         <mxCell id="cd52" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;marginBottom=0;fontSize=12;" value="&lt;b&gt;Laboratory&lt;/b&gt;" vertex="1">
-          <mxGeometry height="82" width="202" x="2077" y="680" as="geometry" />
+          <mxGeometry height="114" width="202" x="2077" y="680" as="geometry" />
         </mxCell>
         <mxCell id="cd53" parent="cd52" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="- onFire: boolean" vertex="1">
           <mxGeometry height="24" width="202" y="26" as="geometry" />
@@ -163,14 +163,20 @@
         <mxCell id="cd54" parent="cd52" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;html=1;" value="" vertex="1">
           <mxGeometry height="8" width="202" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="cd55" parent="cd52" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="+ damageAllEquipment(): void" vertex="1">
-          <mxGeometry height="24" width="202" y="58" as="geometry" />
+        <mxCell id="cd55" parent="cd52" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="+ damageAllEquipment(): void&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(210, 168, 255), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;+&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;isOnFire&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;():boolean&lt;/span&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(210, 168, 255), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;+&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;setOnFire&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;boolean&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;onFire&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;):void&lt;/span&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="56" width="202" y="50" as="geometry" />
         </mxCell>
         <mxCell id="cd56" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;marginBottom=0;fontSize=12;" value="&lt;b&gt;StorageFacility&lt;/b&gt;" vertex="1">
-          <mxGeometry height="50" width="190" x="2319" y="680" as="geometry" />
+          <mxGeometry height="82" width="190" x="2319" y="680" as="geometry" />
         </mxCell>
-        <mxCell id="cd57" parent="cd56" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="- maxStorageVolume: int" vertex="1">
-          <mxGeometry height="24" width="190" y="26" as="geometry" />
+        <mxCell id="cd57" parent="cd56" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="- maxStorageVolume: int&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; line-height: 19px; white-space: pre;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(210, 168, 255), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;getMaxStorageVolume():int&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="56" width="190" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ZzslTFS6IRnlIALeCJax-1" edge="1" parent="cd56" source="cd57" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint y="60" as="sourcePoint" />
+            <mxPoint x="190" y="54" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="cd58" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;marginBottom=0;fontSize=12;" value="&lt;b&gt;PowerStation&lt;/b&gt;" vertex="1">
           <mxGeometry height="82" width="190" x="2549" y="680" as="geometry" />
@@ -185,7 +191,7 @@
           <mxGeometry height="24" width="190" y="58" as="geometry" />
         </mxCell>
         <mxCell id="cd62" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;marginBottom=0;fontSize=12;" value="&lt;b&gt;CommunicationStation&lt;/b&gt;" vertex="1">
-          <mxGeometry height="82" width="202" x="2779" y="680" as="geometry" />
+          <mxGeometry height="100" width="202" x="2779" y="680" as="geometry" />
         </mxCell>
         <mxCell id="cd63" parent="cd62" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="- signalActive: boolean" vertex="1">
           <mxGeometry height="24" width="202" y="26" as="geometry" />
@@ -193,11 +199,11 @@
         <mxCell id="cd64" parent="cd62" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;html=1;" value="" vertex="1">
           <mxGeometry height="8" width="202" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="cd65" parent="cd62" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="+ isCommAvailable(): boolean" vertex="1">
-          <mxGeometry height="24" width="202" y="58" as="geometry" />
+        <mxCell id="cd65" parent="cd62" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="+ isCommAvailable(): boolean&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="202" y="50" as="geometry" />
         </mxCell>
         <mxCell id="cd66" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;startSize=40;horizontal=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;swimlaneFillColor=default;marginBottom=0;fontSize=12;" value="«abstract»&lt;br&gt;&lt;b&gt;&lt;i&gt;Facility&lt;/i&gt;&lt;/b&gt;" vertex="1">
-          <mxGeometry height="240" width="363" x="2232" y="340" as="geometry" />
+          <mxGeometry height="280" width="363" x="2232" y="340" as="geometry" />
         </mxCell>
         <mxCell id="cd67" parent="cd66" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="# name: String&lt;br&gt;# location: String&lt;br&gt;# capacity: int&lt;br&gt;# operational: boolean&lt;br&gt;# resources: Map&amp;lt;ResourceType, Integer&amp;gt;&lt;br&gt;# equipmentList: List&amp;lt;Equipment&amp;gt;" vertex="1">
           <mxGeometry height="104" width="363" y="40" as="geometry" />
@@ -205,8 +211,8 @@
         <mxCell id="cd68" parent="cd66" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;html=1;" value="" vertex="1">
           <mxGeometry height="8" width="363" y="144" as="geometry" />
         </mxCell>
-        <mxCell id="cd69" parent="cd66" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="+ getResourceAmount(type: ResourceType): int&lt;br&gt;+ deductResource(type: ResourceType, amount: int): int&lt;br&gt;+ addResource(type: ResourceType, amount: int): void&lt;br&gt;+ isOperational(): boolean&lt;br&gt;+ setOperational(status: boolean): void" vertex="1">
-          <mxGeometry height="88" width="363" y="152" as="geometry" />
+        <mxCell id="cd69" parent="cd66" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="&lt;div style=&quot;line-height: 100%;&quot;&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px; line-height: 100%;&quot;&gt;+ getResourceAmount(type: ResourceType): int&lt;br&gt;+ deductResource(type: ResourceType, amount: int): int&lt;br&gt;+ addResource(type: ResourceType, amount: int): void&lt;br&gt;+ isOperational(): boolean&lt;br&gt;+ setOperational(status: boolean): void&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(86, 156, 214), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 10px; line-height: 100%;&quot;&gt;&lt;font&gt;+&lt;/font&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;public&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;String&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;getName&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;():string&lt;/span&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(187, 190, 191), rgb(255, 255, 255));&quot;&gt;&lt;font&gt;&lt;font style=&quot;font-size: 10px; line-height: 100%;&quot;&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;+&lt;/span&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 10px; line-height: 100%;&quot;&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;getLocation&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;():string&lt;/span&gt;&lt;/font&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(187, 190, 191), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 10px; line-height: 100%;&quot;&gt;&lt;font&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;+&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;getCapacity&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;():int&lt;/span&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(187, 190, 191), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;font style=&quot;line-height: 100%;&quot;&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;+&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;getEquipmentList&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;():&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;List&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;Equipment&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span style=&quot;color: light-dark(rgb(187, 190, 191), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;+&lt;/span&gt;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(187, 190, 191), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;addEquipment&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;Equipment&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;e&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;):void&lt;/span&gt;&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="128" width="363" y="152" as="geometry" />
         </mxCell>
         <mxCell id="cd70" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;marginBottom=0;fontSize=12;" value="&lt;b&gt;LifeSupportSystem&lt;/b&gt;" vertex="1">
           <mxGeometry height="114" width="196" x="1804" y="900" as="geometry" />
@@ -353,7 +359,7 @@
           <mxGeometry height="56" width="320" y="152" as="geometry" />
         </mxCell>
         <mxCell id="cd118" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;marginBottom=0;fontSize=12;" value="&lt;b&gt;MarsColony&lt;/b&gt;" vertex="1">
-          <mxGeometry height="242" width="431" x="1684" as="geometry" />
+          <mxGeometry height="330" width="431" x="1670" y="-53" as="geometry" />
         </mxCell>
         <mxCell id="cd119" parent="cd118" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="- name: String&lt;br&gt;- environment: EnvironmentCondition&lt;br&gt;- agents: List&amp;lt;Agent&amp;gt;&lt;br&gt;- facilities: List&amp;lt;Facility&amp;gt;&lt;br&gt;- activeMission: Mission&lt;br&gt;- missionHistory: List&amp;lt;Mission&amp;gt;&lt;br&gt;- emergencies: List&amp;lt;Emergency&amp;gt;" vertex="1">
           <mxGeometry height="120" width="431" y="26" as="geometry" />
@@ -361,11 +367,11 @@
         <mxCell id="cd120" parent="cd118" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;html=1;" value="" vertex="1">
           <mxGeometry height="8" width="431" y="146" as="geometry" />
         </mxCell>
-        <mxCell id="cd121" parent="cd118" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="+ submitMission(m: Mission, assignedAgents: List&amp;lt;Agent&amp;gt;): boolean&lt;br&gt;+ getTotalResource(type: ResourceType): int&lt;br&gt;+ consumeResource(type: ResourceType, amount: int): boolean&lt;br&gt;+ handleEmergency(e: Emergency): void&lt;br&gt;+ generateStatusReport(): String" vertex="1">
-          <mxGeometry height="88" width="431" y="154" as="geometry" />
+        <mxCell id="cd121" parent="cd118" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;fontColor=light-dark(#BBBEBF,#FFFFFF);" value="&lt;div style=&quot;line-height: 100%;&quot;&gt;&lt;font style=&quot;font-size: 10px; line-height: 100%;&quot;&gt;+ submitMission(m: Mission, assignedAgents: List&amp;lt;Agent&amp;gt;): boolean&lt;br&gt;+ getTotalResource(type: ResourceType): int&lt;br&gt;+ consumeResource(type: ResourceType, amount: int): boolean&lt;br&gt;+ handleEmergency(e: Emergency): void&lt;br&gt;+ generateStatusReport(): String&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px; line-height: 100%;&quot;&gt;+&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;hasActiveCommunicationStation():&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;boolean&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;font style=&quot;line-height: 100%;&quot;&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;+&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;setEnvironment&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;EnvironmentCondition&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;environment&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;):void&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px; color: light-dark(rgb(187, 190, 191), rgb(255, 255, 255));&quot;&gt;&lt;font&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;+&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;setActiveMission&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;Mission&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;activeMission&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;):void&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px; color: light-dark(rgb(187, 190, 191), rgb(255, 255, 255));&quot;&gt;&lt;font&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;+&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;clearActiveMission&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;():void&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px; color: light-dark(rgb(187, 190, 191), rgb(255, 255, 255));&quot;&gt;&lt;font&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;+&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;consumeResourcesAtomically&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;(&lt;/span&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(187, 190, 191), rgb(255, 255, 255)); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre; background-color: transparent;&quot;&gt;Map&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(187, 190, 191), rgb(255, 255, 255)); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre; background-color: transparent;&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(187, 190, 191), rgb(255, 255, 255)); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre; background-color: transparent;&quot;&gt;ResourceType&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(187, 190, 191), rgb(255, 255, 255)); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre; background-color: transparent;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(187, 190, 191), rgb(255, 255, 255)); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre; background-color: transparent;&quot;&gt;Integer&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(187, 190, 191), rgb(255, 255, 255)); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre; background-color: transparent;&quot;&gt;&amp;gt; &lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(187, 190, 191), rgb(255, 255, 255)); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre; background-color: transparent;&quot;&gt;resources):boolean&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px; color: light-dark(rgb(187, 190, 191), rgb(255, 255, 255));&quot;&gt;&lt;font&gt;&lt;font&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;+&lt;/span&gt;&lt;/font&gt;&lt;/font&gt;&lt;font&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;addFacility&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;Facility&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;facility&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;):void&lt;/span&gt;&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px; color: light-dark(rgb(187, 190, 191), rgb(255, 255, 255));&quot;&gt;&lt;font&gt;&lt;font&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;+&lt;/span&gt;&lt;/font&gt;&lt;/font&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;addAgent&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;Agent&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;agent&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;):void&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="184" width="431" y="146" as="geometry" />
         </mxCell>
         <mxCell id="cd122" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;marginBottom=0;fontSize=12;" value="&lt;b&gt;Simulation&lt;/b&gt;" vertex="1">
-          <mxGeometry height="130" width="357" x="1177" y="56" as="geometry" />
+          <mxGeometry height="170" width="357" x="1177" y="56" as="geometry" />
         </mxCell>
         <mxCell id="cd123" parent="cd122" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="- currentTime: int&lt;br&gt;- colony: MarsColony" vertex="1">
           <mxGeometry height="40" width="357" y="26" as="geometry" />
@@ -373,8 +379,8 @@
         <mxCell id="cd124" parent="cd122" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;html=1;" value="" vertex="1">
           <mxGeometry height="8" width="357" y="66" as="geometry" />
         </mxCell>
-        <mxCell id="cd125" parent="cd122" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="+ advanceTime(units: int): void&lt;br&gt;+ changeEnvironment(cond: EnvironmentCondition): void&lt;br&gt;+ triggerEmergency(e: Emergency): void" vertex="1">
-          <mxGeometry height="56" width="357" y="74" as="geometry" />
+        <mxCell id="cd125" parent="cd122" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="+ advanceTime(units: int): void&lt;br&gt;+ changeEnvironment(cond: EnvironmentCondition): void&lt;br&gt;+ triggerEmergency(e: Emergency): void&lt;div&gt;&lt;span&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;+&lt;/font&gt;&lt;span style=&quot;color: light-dark(rgb(210, 168, 255), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;advanceTime&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;int&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;units&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;):void&lt;/span&gt;&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(210, 168, 255), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;+&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;getCurrentTime&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;():int&lt;/span&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px; color: light-dark(rgb(210, 168, 255), rgb(255, 255, 255));&quot;&gt;&lt;font&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;+&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;getColony&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;():&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;MarsColony&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="96" width="357" y="74" as="geometry" />
         </mxCell>
         <mxCell id="cd126" edge="1" parent="1" source="cd36" style="html=1;endArrow=block;endSize=14;endFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=0;entryX=0.5;entryY=1;dashed=1;" target="cd44" value="">
           <mxGeometry relative="1" as="geometry" />
@@ -444,11 +450,15 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="cd147" edge="1" parent="1" source="cd118" style="html=1;endArrow=diamondThin;endFill=1;endSize=20;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="cd122" value="manages">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1670" y="121" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="cd148" connectable="0" parent="cd147" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;" value="1" vertex="1">
           <mxGeometry relative="1" x="-1" as="geometry">
-            <mxPoint x="8" y="-16" as="offset" />
+            <mxPoint x="-10" y="-11" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="cd149" connectable="0" parent="cd147" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;" value="1" vertex="1">
@@ -466,40 +476,23 @@
         </mxCell>
         <mxCell id="cd152" connectable="0" parent="cd150" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;" value="1" vertex="1">
           <mxGeometry relative="1" x="1" as="geometry">
-            <mxPoint x="8" y="-16" as="offset" />
+            <mxPoint x="-20" y="10" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cd153" edge="1" parent="1" source="cd66" style="html=1;endArrow=diamondThin;endFill=0;endSize=20;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=0;entryX=0.6;entryY=1;" target="cd118" value="aggregates">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="2414" y="280" />
-              <mxPoint x="1943" y="280" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="cd154" connectable="0" parent="cd153" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;" value="1..*" vertex="1">
-          <mxGeometry relative="1" x="-1" as="geometry">
-            <mxPoint x="8" y="-16" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="cd155" connectable="0" parent="cd153" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;" value="1" vertex="1">
-          <mxGeometry relative="1" x="1" as="geometry">
-            <mxPoint x="8" y="-16" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="cd156" edge="1" parent="1" source="cd118" style="html=1;endArrow=open;endFill=0;endSize=10;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.05;exitY=1;entryX=0.5;entryY=0;" target="cd94" value="activeMission">
-          <mxGeometry relative="1" as="geometry">
+        <mxCell id="cd156" edge="1" parent="1" style="html=1;endArrow=open;endFill=0;endSize=10;edgeStyle=orthogonalEdgeStyle;rounded=0;entryX=0.5;entryY=0;" target="cd94" value="activeMission">
+          <mxGeometry relative="1" x="0.0017" as="geometry">
             <Array as="points">
               <mxPoint x="1706" y="325" />
               <mxPoint x="-130" y="325" />
               <mxPoint x="-130" y="1215" />
               <mxPoint x="750" y="1215" />
             </Array>
+            <mxPoint x="1700" y="290" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="cd157" connectable="0" parent="cd156" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;" value="1" vertex="1">
-          <mxGeometry relative="1" x="-1" as="geometry">
-            <mxPoint x="8" y="-16" as="offset" />
+          <mxGeometry relative="1" x="-0.997" as="geometry">
+            <mxPoint x="4" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="cd159" edge="1" parent="1" source="cd118" style="html=1;endArrow=open;endFill=0;endSize=10;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" target="cd114" value="handles">
@@ -573,6 +566,26 @@
         </mxCell>
         <mxCell id="cd177" parent="1" style="text;html=1;align=left;verticalAlign=top;" value="&lt;b style=&quot;font-size:22px&quot;&gt;MARS-OPS: Class Diagram&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:12px&quot;&gt;Blue = concrete, orange = abstract, green = interface, yellow = enumeration&lt;/span&gt;" vertex="1">
           <mxGeometry height="50" width="1000" y="-90" as="geometry" />
+        </mxCell>
+        <mxCell id="cd153" edge="1" parent="1" style="html=1;endArrow=diamondThin;endFill=0;endSize=20;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=0;entryX=0.6;entryY=1;" value="aggregates">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2511.4" y="290" />
+              <mxPoint x="2040.4" y="290" />
+            </Array>
+            <mxPoint x="2510.9" y="350" as="sourcePoint" />
+            <mxPoint x="2040" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cd154" connectable="0" parent="cd153" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="8" y="-16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cd155" connectable="0" parent="cd153" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="8" y="-16" as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
