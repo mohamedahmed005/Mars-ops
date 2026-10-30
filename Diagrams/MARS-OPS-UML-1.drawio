@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" pages="7">
   <diagram id="cd" name="1 Class Diagram">
-    <mxGraphModel dx="1263" dy="904" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="3600" pageHeight="2400" background="light-dark(#FFFFFF,#004C99)" math="0" shadow="0">
+    <mxGraphModel dx="2190" dy="1445" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="3600" pageHeight="2400" background="light-dark(#FFFFFF,#004C99)" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -35,7 +35,7 @@
           <mxGeometry height="104" width="190" y="40" as="geometry" />
         </mxCell>
         <mxCell id="cd12" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;marginBottom=0;fontSize=12;" value="&lt;b&gt;Scientist&lt;/b&gt;" vertex="1">
-          <mxGeometry height="98" width="233" y="920" as="geometry" />
+          <mxGeometry height="124" width="233" y="980" as="geometry" />
         </mxCell>
         <mxCell id="cd13" parent="cd12" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="- researchSpecialty: String" vertex="1">
           <mxGeometry height="24" width="233" y="26" as="geometry" />
@@ -43,11 +43,11 @@
         <mxCell id="cd14" parent="cd12" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;html=1;" value="" vertex="1">
           <mxGeometry height="8" width="233" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="cd15" parent="cd12" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="+ performDuty(): void&lt;br&gt;+ canPerform(m: Mission): boolean" vertex="1">
-          <mxGeometry height="40" width="233" y="58" as="geometry" />
+        <mxCell id="cd15" parent="cd12" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="+ performDuty(): void&lt;br&gt;+ canPerform(m: Mission): boolean&lt;div&gt;+&lt;font style=&quot;font-size: 10px; color: light-dark(rgb(210, 168, 255), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;canRespond&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;Emergency&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;emergency&lt;/span&gt;&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;):boolean&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="66" width="233" y="58" as="geometry" />
         </mxCell>
         <mxCell id="cd16" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;marginBottom=0;fontSize=12;" value="&lt;b&gt;Engineer&lt;/b&gt;" vertex="1">
-          <mxGeometry height="114" width="245" x="273" y="920" as="geometry" />
+          <mxGeometry height="114" width="245" x="273" y="980" as="geometry" />
         </mxCell>
         <mxCell id="cd17" parent="cd16" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="" vertex="1">
           <mxGeometry height="8" width="245" y="26" as="geometry" />
@@ -59,7 +59,7 @@
           <mxGeometry height="72" width="245" y="42" as="geometry" />
         </mxCell>
         <mxCell id="cd20" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;marginBottom=0;fontSize=12;" value="&lt;b&gt;MedicalOfficer&lt;/b&gt;" vertex="1">
-          <mxGeometry height="124" width="245" x="560" y="920" as="geometry" />
+          <mxGeometry height="124" width="245" x="560" y="980" as="geometry" />
         </mxCell>
         <mxCell id="cd21" parent="cd20" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="" vertex="1">
           <mxGeometry height="8" width="245" y="26" as="geometry" />
@@ -71,7 +71,7 @@
           <mxGeometry height="72" width="245" y="42" as="geometry" />
         </mxCell>
         <mxCell id="cd24" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;marginBottom=0;fontSize=12;" value="&lt;b&gt;ExplorationRover&lt;/b&gt;" vertex="1">
-          <mxGeometry height="82" width="233" x="843" y="920" as="geometry" />
+          <mxGeometry height="130" width="233" x="843" y="920" as="geometry" />
         </mxCell>
         <mxCell id="cd25" parent="cd24" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="- cargo: List&amp;lt;Equipment&amp;gt;" vertex="1">
           <mxGeometry height="24" width="233" y="26" as="geometry" />
@@ -80,7 +80,7 @@
           <mxGeometry height="8" width="233" y="50" as="geometry" />
         </mxCell>
         <mxCell id="cd27" parent="cd24" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="+ canPerform(m: Mission): boolean" vertex="1">
-          <mxGeometry height="24" width="233" y="58" as="geometry" />
+          <mxGeometry height="24" width="233" y="50" as="geometry" />
         </mxCell>
         <mxCell id="cd28" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;marginBottom=0;fontSize=12;" value="&lt;b&gt;RepairRobot&lt;/b&gt;" vertex="1">
           <mxGeometry height="82" width="245" x="1116" y="920" as="geometry" />
@@ -107,19 +107,19 @@
           <mxGeometry height="24" width="233" y="42" as="geometry" />
         </mxCell>
         <mxCell id="cd36" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;startSize=40;horizontal=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;swimlaneFillColor=default;marginBottom=0;fontSize=12;" value="«abstract»&lt;br&gt;&lt;b&gt;&lt;i&gt;CrewMember&lt;/i&gt;&lt;/b&gt;" vertex="1">
-          <mxGeometry height="224" width="252" x="272" y="620" as="geometry" />
+          <mxGeometry height="350" width="252" x="266" y="590" as="geometry" />
         </mxCell>
         <mxCell id="cd37" parent="cd36" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="# id: String&lt;br&gt;# name: String&lt;br&gt;# health: int&lt;br&gt;# fatigue: int&lt;br&gt;# location: String&lt;br&gt;# available: boolean&lt;br&gt;# skills: Set&amp;lt;Capability&amp;gt;" vertex="1">
-          <mxGeometry height="120" width="252" y="40" as="geometry" />
+          <mxGeometry height="120" width="252" y="48" as="geometry" />
         </mxCell>
         <mxCell id="cd38" parent="cd36" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;html=1;" value="" vertex="1">
           <mxGeometry height="8" width="252" y="160" as="geometry" />
         </mxCell>
-        <mxCell id="cd39" parent="cd36" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="&lt;i&gt;+ performDuty(): void&lt;/i&gt;&lt;br&gt;+ increaseFatigue(amount: int): void&lt;br&gt;+ heal(amount: int): void" vertex="1">
-          <mxGeometry height="56" width="252" y="168" as="geometry" />
+        <mxCell id="cd39" parent="cd36" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="&lt;span&gt;&lt;i&gt;+ performDuty(): void&lt;/i&gt;&lt;br&gt;+ increaseFatigue(amount: int): void&lt;br&gt;+ heal(amount: int): void&lt;/span&gt;&lt;div&gt;&lt;span&gt;+ getId(): String&lt;br&gt;+ getName(): String&lt;br&gt;+ getLocation(): String&lt;br&gt;+ setLocation(loc: String): void&lt;br&gt;+ isAvailable(): boolean&lt;br&gt;+ setAvailable(avail: boolean): void&lt;br&gt;+ hasCapability(cap: Capability): boolean&lt;br&gt;+ canPerform(m: Mission): boolean&lt;br&gt;+ canRespond(e: Emergency): boolean&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(210, 168, 255), rgb(255, 255, 255));&quot;&gt;&lt;font&gt;+&lt;span style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;takeDamage:void&lt;/span&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="252" y="160" as="geometry" />
         </mxCell>
         <mxCell id="cd40" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;startSize=40;horizontal=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;swimlaneFillColor=default;marginBottom=0;fontSize=12;" value="«abstract»&lt;br&gt;&lt;b&gt;&lt;i&gt;RoboticUnit&lt;/i&gt;&lt;/b&gt;" vertex="1">
-          <mxGeometry height="224" width="245" x="1116" y="620" as="geometry" />
+          <mxGeometry height="224" width="245" x="1130" y="590" as="geometry" />
         </mxCell>
         <mxCell id="cd41" parent="cd40" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="# id: String&lt;br&gt;# model: String&lt;br&gt;# batteryLevel: int&lt;br&gt;# damaged: boolean&lt;br&gt;# location: String&lt;br&gt;# available: boolean&lt;br&gt;# capabilities: Set&amp;lt;Capability&amp;gt;" vertex="1">
           <mxGeometry height="120" width="245" y="40" as="geometry" />
@@ -388,18 +388,23 @@
         <mxCell id="cd127" edge="1" parent="1" source="cd40" style="html=1;endArrow=block;endSize=14;endFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=0;entryX=0.5;entryY=1;dashed=1;" target="cd44" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="cd128" edge="1" parent="1" source="cd12" style="html=1;endArrow=block;endSize=14;endFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="cd36" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="cd129" edge="1" parent="1" source="cd16" style="html=1;endArrow=block;endSize=14;endFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="cd36" value="">
-          <mxGeometry relative="1" as="geometry">
+        <mxCell id="cd128" edge="1" parent="1" source="cd12" style="html=1;endArrow=block;endSize=14;endFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="cd39" value="">
+          <mxGeometry relative="1" x="0.0313" as="geometry">
             <Array as="points">
-              <mxPoint x="398" y="920" />
+              <mxPoint x="116.5" y="960" />
+              <mxPoint x="392" y="960" />
             </Array>
+            <mxPoint x="392" y="909.9999999999998" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cd130" edge="1" parent="1" source="cd20" style="html=1;endArrow=block;endSize=14;endFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="cd36" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="cd130" edge="1" parent="1" source="cd20" style="html=1;endArrow=block;endSize=14;endFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="cd36" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="682.5" y="960" />
+              <mxPoint x="392" y="960" />
+            </Array>
+            <mxPoint x="392" y="909.9999999999998" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="cd131" edge="1" parent="1" source="cd24" style="html=1;endArrow=block;endSize=14;endFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="cd40" value="">
           <mxGeometry relative="1" as="geometry" />
