@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" pages="7">
   <diagram id="cd" name="1 Class Diagram">
-    <mxGraphModel dx="1881" dy="1217" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="3600" pageHeight="2400" background="light-dark(#FFFFFF,#004C99)" math="0" shadow="0">
+    <mxGraphModel dx="997" dy="748" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="3600" pageHeight="2400" background="light-dark(#FFFFFF,#004C99)" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -355,7 +355,7 @@
         <mxCell id="cd116" parent="cd114" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;html=1;" value="" vertex="1">
           <mxGeometry height="8" width="320" y="144" as="geometry" />
         </mxCell>
-        <mxCell id="cd117" parent="cd114" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="&lt;i&gt;+ handle(colony: MarsColony): void&lt;/i&gt;&lt;br&gt;+ resolve(): void&lt;br&gt;+ markUnresolved(reason: String): void" vertex="1">
+        <mxCell id="cd117" parent="cd114" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="&lt;i&gt;+ handle(colony: MarsColony): void&lt;/i&gt;&lt;br&gt;+ resolve(): void&lt;br&gt;+ markUnresolved(reason: String): void&lt;div&gt;+&lt;/div&gt;" vertex="1">
           <mxGeometry height="148" width="320" y="152" as="geometry" />
         </mxCell>
         <mxCell id="cd118" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;marginBottom=0;fontSize=12;" value="&lt;b&gt;MarsColony&lt;/b&gt;" vertex="1">
