@@ -22,6 +22,31 @@ public class LifeSupportSystem {
     System.out.println("Life support managing oxygen at "+ filtrationEfficiency +"% efficiency");
     }
 
+    public void manageWater(){
+        if (!active) {
+        System.out.println("Life support is inactive!");
+        return;
+         }
+        System.out.println("Life support managing water at "+ filtrationEfficiency +"% efficiency");
+    }
+
+    public void manageFood(){
+    if (!active) {
+        System.out.println("Life support is inactive!");
+        return;
+    }
+    System.out.println("Life support managing food supply at " + filtrationEfficiency + "% efficiency");
+    }
+
+public void manageMedicalSupplies(){
+    if (!active) {
+        System.out.println("Life support is inactive!");
+        return;
+    }
+    
+    System.out.println("Life support managing medical supplies at " + filtrationEfficiency + "% efficiency");
+    }
+
     public boolean checkIntegrity(){
     return this.active && this.filtrationEfficiency >0;
     }
