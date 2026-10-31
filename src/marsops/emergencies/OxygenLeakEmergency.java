@@ -63,15 +63,18 @@ public class OxygenLeakEmergency extends Emergency {
     selectedResponders.add(humanResponder);
     selectedResponders.add(robotResponder);
 
-    try {
+        try {
     dispatchResponders(selectedResponders);
     consumeRequiredResources(colony);
-    affectedHabitat.setOperational(true);
-    markResolved();}
+    if (affectedHabitat.getOxygenLevel() > 0) {
+        affectedHabitat.setOperational(true);
+        markResolved();
+    } else {
+        markUnresolved("Leak repaired but habitat oxygen is depleted");
+    }}
     finally {
         releaseResponders();}
     }
-
     private void applyUnresolvedPenalty(String reason) {
     affectedHabitat.reduceOxygen(oxygenLossAmount);
     affectedHabitat.setOperational(false);
