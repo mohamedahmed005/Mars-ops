@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
+import marsops.agents.CrewMember;
+import marsops.agents.RoboticUnit;
 import marsops.core.Agent;
 import marsops.core.EnvironmentCondition;
 import marsops.core.MarsColony;
@@ -117,14 +119,27 @@ public abstract class Mission {
     }
 
     public void advanceOneTimeUnit(EnvironmentCondition env) {
-        if (this.state != MissionState.IN_PROGRESS) {
-            return;
-        }
-        this.elapsedTime++;
-        if (this.elapsedTime >= this.duration) {
-            complete();
+    if (this.state != MissionState.IN_PROGRESS) {
+        return;
+    }
+    this.elapsedTime++;
+    for (Agent agent : assignedAgents) {                       // جديد
+        if (agent instanceof RoboticUnit) {
+            ((RoboticUnit) agent).consumeBattery(5);
+        } else if (agent instanceof CrewMember) {
+            ((CrewMember) agent).increaseFatigue(5);
         }
     }
+    for (Agent agent : assignedAgents) {                       // جديد
+        if (agent instanceof RoboticUnit && ((RoboticUnit) agent).getBatteryLevel() == 0) {
+            fail("Battery depleted: " + agent.getName());
+            return;
+        }
+    }
+    if (this.elapsedTime >= this.duration) {
+        complete();
+    }
+}
 
     public void onEnvironmentChange(EnvironmentCondition env) {
     }

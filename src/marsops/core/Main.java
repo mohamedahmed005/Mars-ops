@@ -182,6 +182,8 @@ public class Main {
     }
 
     private static boolean submit(World w, Mission mission, Agent... agents) {
+        resources(w, "RESOURCES BEFORE SUBMITTING " + mission.getMissionId(), 
+        ResourceType.FUEL, ResourceType.BATTERY_POWER, ResourceType.SPARE_PARTS);
         boolean accepted = w.colony.submitMission(mission, Arrays.asList(agents));
         List<String> names = new ArrayList<>();
         for (Agent a : agents) {
@@ -244,7 +246,7 @@ public class Main {
     // ------------------------------------------------------------------
     // Scenarios
     // ------------------------------------------------------------------
-    private static void scenario1() {
+        private static void scenario1() {
         banner("SCENARIO 1: Successful Exploration Mission");
         World w = buildWorld();
 
@@ -261,6 +263,9 @@ public class Main {
         section("Before");
         reportBox("COLONY STATUS (INITIAL)", w.colony.generateStatusReport());
         resources(w, "RESOURCES BEFORE", ResourceType.FUEL, ResourceType.BATTERY_POWER);
+        box("UNIT STATE BEFORE",
+                "Rover battery", String.valueOf(w.rover.getBatteryLevel()),
+                "Scientist fatigue", String.valueOf(w.scientist.getFatigue()));
 
         section("Submit and run");
         if (submit(w, m, w.scientist, w.rover)) {
@@ -272,6 +277,9 @@ public class Main {
         reportBox("COLONY STATUS (FINAL)", w.colony.generateStatusReport());
         resources(w, "RESOURCES AFTER (mission cost consumed)", ResourceType.FUEL, ResourceType.BATTERY_POWER);
         agents(w, "AGENTS RELEASED");
+        box("UNIT STATE AFTER",
+                "Rover battery", String.valueOf(w.rover.getBatteryLevel()),
+                "Scientist fatigue", String.valueOf(w.scientist.getFatigue()));
         box("VERIFICATION",
                 "Mission state", String.valueOf(m.getState()),
                 "Progress", m.getElapsedTime() + "/" + m.getDuration(),
