@@ -1,6 +1,6 @@
-<mxfile host="Electron" pages="7">
+<mxfile host="app.diagrams.net" pages="7">
   <diagram id="cd" name="1 Class Diagram">
-    <mxGraphModel dx="6508" dy="4308" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="3600" pageHeight="2400" background="light-dark(#FFFFFF,#000000)" math="0" shadow="0">
+    <mxGraphModel dx="1129" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="3600" pageHeight="2400" background="light-dark(#FFFFFF,#000000)" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -67,7 +67,7 @@
         <mxCell id="cd22" parent="cd20" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;html=1;" value="" vertex="1">
           <mxGeometry height="8" width="245" y="34" as="geometry" />
         </mxCell>
-        <mxCell id="cd23" parent="cd20" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="+ performDuty(): void&lt;br&gt;+ treat(patient: CrewMember): void&lt;br&gt;+ canPerform(m: Mission): boolean&lt;br&gt;+ canRespond(e: Emergency): boolean" vertex="1">
+        <mxCell id="cd23" parent="cd20" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=3;overflow=hidden;rotatable=0;html=1;whiteSpace=nowrap;fontSize=11;" value="+ performDuty(): void&lt;br&gt;+ canPerform(m: Mission): boolean&lt;br&gt;+ canRespond(e: Emergency): boolean" vertex="1">
           <mxGeometry height="72" width="245" y="42" as="geometry" />
         </mxCell>
         <mxCell id="cd24" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=top;startSize=26;horizontal=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=default;marginBottom=0;fontSize=12;" value="&lt;b&gt;ExplorationRover&lt;/b&gt;" vertex="1">
