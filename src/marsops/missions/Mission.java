@@ -81,7 +81,7 @@ public abstract class Mission {
         return requiredResources;
     }
 
-    public void addRequiredResource(ResourceType type, int amount) {
+  
         public void addRequiredResource(ResourceType type, int amount) {
     if (type == null) {
         throw new IllegalArgumentException("Resource type cannot be null");

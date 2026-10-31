@@ -3,12 +3,12 @@
 Computer and Communications Programming II, Fall 2026, Lab 5
 Alexandria University, Faculty of Engineering, Computer and Communication Engineering
 
-| Team member | ID | Main responsibility |
-|---|---|---|
-| `<fill in>` | `<fill in>` | Facilities, equipment, resources (package `facilities`) |
-| `<fill in>` | `<fill in>` | Personnel and robots (package `agents`) |
-| `<fill in>` | `<fill in>` | Colony, missions, simulation (packages `core`, `missions`) |
-| `<fill in>` | `<fill in>` | Emergencies, demonstration `Main` (package `emergencies`, `core.Main`) |
+| Team member | Main responsibility |
+|---|---|
+| `<mohamed raouf>` | Facilities, equipment, resources (package `facilities`) |
+| `<karim mohamed>` | Personnel and robots (package `agents`) |
+| `<mahmoud alaa>`  |  missions, simulation (packages `core`, `missions`) |
+| `<mohamed ahmed>` | Emergencies, demonstration,Colony,`Main` (package `emergencies`, `core.Main`) |
 
 ---
 
