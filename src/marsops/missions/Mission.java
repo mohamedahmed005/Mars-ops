@@ -24,17 +24,17 @@ public abstract class Mission {
 
     public Mission(String missionId, int duration) {
         if (missionId == null || missionId.isBlank()) {
-        throw new IllegalArgumentException("Mission id cannot be null or blank");
-    }
-    if (duration <= 0) {
-        throw new IllegalArgumentException("Mission duration must be a positive number");
-    }
-    this.missionId = missionId.trim();
-    this.duration = duration;
+            throw new IllegalArgumentException("Mission id cannot be null or blank");
+        }
+        if (duration <= 0) {
+            throw new IllegalArgumentException("Mission duration must be a positive number");
+        }
+        this.missionId = missionId.trim();
+        this.duration = duration;
         this.elapsedTime = 0;
         this.state = MissionState.ASSIGNED;
         this.assignedAgents = new ArrayList<>();
-        this.requiredResources = new EnumMap<>(ResourceType.class);   
+        this.requiredResources = new EnumMap<>(ResourceType.class);
     }
 
     public String getMissionId() {
@@ -46,17 +46,16 @@ public abstract class Mission {
     }
 
     public void setState(MissionState state) {
-         if (state == null) {
-        throw new IllegalArgumentException("Mission state cannot be null");
-    }
-    this.state = state;
+        if (state == null) {
+            throw new IllegalArgumentException("Mission state cannot be null");
+        }
+        this.state = state;
     }
 
     public String getFailureReason() {
         return failureReason;
     }
 
-    
     public int getDuration() {
         return duration;
     }
@@ -81,22 +80,18 @@ public abstract class Mission {
         return requiredResources;
     }
 
-  
-        public void addRequiredResource(ResourceType type, int amount) {
-    if (type == null) {
-        throw new IllegalArgumentException("Resource type cannot be null");
+    public void addRequiredResource(ResourceType type, int amount) {
+        if (type == null) {
+            throw new IllegalArgumentException("Resource type cannot be null");
+        }
+        if (amount < 0) {
+            throw new IllegalArgumentException("Resource amount cannot be negative");
+        }
+        requiredResources.put(type, amount);
     }
-    if (amount < 0) {
-        throw new IllegalArgumentException("Resource amount cannot be negative");
-    }
-    requiredResources.put(type, amount);
-}
-    
 
-    
     public abstract boolean validateRequirements(MarsColony colony);
 
-    
     public void assignAgents(List<Agent> agents) {
         if (agents != null) {
             for (Agent agent : agents) {
@@ -105,7 +100,6 @@ public abstract class Mission {
         }
     }
 
-    
     public void reserveAgents() {
         for (Agent agent : assignedAgents) {
             if (agent != null) {
@@ -115,7 +109,6 @@ public abstract class Mission {
         agentsReserved = true;
     }
 
-    
     public void start() {
         if (this.state != MissionState.ASSIGNED) {
             throw new IllegalStateException("Mission " + missionId + " cannot start from state " + state);
@@ -123,7 +116,6 @@ public abstract class Mission {
         this.state = MissionState.IN_PROGRESS;
     }
 
-   
     public void advanceOneTimeUnit(EnvironmentCondition env) {
         if (this.state != MissionState.IN_PROGRESS) {
             return;
@@ -133,22 +125,24 @@ public abstract class Mission {
             complete();
         }
     }
-    public void onEnvironmentChange(EnvironmentCondition env) { }
+
+    public void onEnvironmentChange(EnvironmentCondition env) {
+    }
+
     public void fail(String reason) {
 
         if (this.state == MissionState.COMPLETED || this.state == MissionState.FAILED) {
             return;
         }
         this.state = MissionState.FAILED;
-                if (reason == null || reason.isBlank()) {
-    reason = "No reason was given";
-}
-this.failureReason = reason.trim();
+        if (reason == null || reason.isBlank()) {
+            reason = "No reason was given";
+        }
+        this.failureReason = reason.trim();
         if (agentsReserved) {
             releaseAgents();
         }
     }
-
 
     public void complete() {
         this.state = MissionState.COMPLETED;
@@ -160,12 +154,13 @@ this.failureReason = reason.trim();
         return missionId + " [" + state + "]"
                 + (failureReason != null ? " (reason: " + failureReason + ")" : "");
     }
+
     public void releaseAgents() {
         for (Agent agent : assignedAgents) {
             if (agent != null) {
                 agent.setAvailable(true);
             }
         }
-        agentsReserved = false;   
+        agentsReserved = false;
     }
 }

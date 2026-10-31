@@ -12,8 +12,6 @@ import marsops.agents.MedicalOfficer;
 import marsops.agents.RepairRobot;
 import marsops.agents.Scientist;
 import marsops.emergencies.Emergency;
-import marsops.emergencies.FireEmergency;
-import marsops.emergencies.MedicalEmergency;
 import marsops.emergencies.OxygenLeakEmergency;
 import marsops.emergencies.RoverBreakdownEmergency;
 import marsops.facilities.CommunicationStation;
@@ -25,11 +23,10 @@ import marsops.facilities.StorageFacility;
 import marsops.missions.ExplorationMission;
 import marsops.missions.Mission;
 import marsops.missions.RepairMission;
-import marsops.missions.RescueMission;
 
 /**
  * MARS-OPS demo runner.
- * Usage: no arguments = run all scenarios, or pass scenario numbers (e.g. 1 4 9).
+ * Usage: no arguments = run all scenarios, or pass scenario numbers (e.g. 1 4 6).
  */
 public class Main {
 
@@ -250,11 +247,22 @@ public class Main {
     private static void scenario1() {
         banner("SCENARIO 1: Successful Exploration Mission");
         World w = buildWorld();
+
+        section("Create scientist, rover, equipment and mission");
+        Equipment sampler = new Equipment("Soil Sampler", Capability.SCIENTIFIC_RESEARCH);
+        w.rover.getCargo().add(sampler);
+        ExplorationMission m = exploration("EXP-1", 3);
+        box("CREATED OBJECTS",
+                "Scientist", w.scientist.getName(),
+                "Exploration rover", w.rover.getName(),
+                "Equipment (rover cargo)", sampler.getName(),
+                "Mission", m.getMissionId() + " -> " + m.getTargetRegion() + " (duration " + m.getDuration() + ")");
+
         section("Before");
         reportBox("COLONY STATUS (INITIAL)", w.colony.generateStatusReport());
+        resources(w, "RESOURCES BEFORE", ResourceType.FUEL, ResourceType.BATTERY_POWER);
 
         section("Submit and run");
-        ExplorationMission m = exploration("EXP-1", 3);
         if (submit(w, m, w.scientist, w.rover)) {
             agents(w, "AGENTS DURING MISSION");
             tick(w, m, 3);
@@ -262,6 +270,13 @@ public class Main {
 
         section("After");
         reportBox("COLONY STATUS (FINAL)", w.colony.generateStatusReport());
+        resources(w, "RESOURCES AFTER (mission cost consumed)", ResourceType.FUEL, ResourceType.BATTERY_POWER);
+        agents(w, "AGENTS RELEASED");
+        box("VERIFICATION",
+                "Mission state", String.valueOf(m.getState()),
+                "Progress", m.getElapsedTime() + "/" + m.getDuration(),
+                "Colony active mission", activeMission(w.colony),
+                "Equipment damaged", String.valueOf(sampler.isDamaged()));
     }
 
     private static void scenario2() {
@@ -269,7 +284,17 @@ public class Main {
 
         section("2a. Unsuitable agent (engineer cannot explore)");
         World w = buildWorld();
-        submit(w, exploration("EXP-BAD", 3), w.engineer);
+        ExplorationMission bad = exploration("EXP-BAD", 3);
+        resources(w, "BEFORE", ResourceType.FUEL, ResourceType.BATTERY_POWER);
+        submit(w, bad, w.engineer);
+        System.out.println(line('-'));
+        row("Mission cannot be assigned. Reason: " + bad.getFailureReason());
+        System.out.println(line('-'));
+        box("VERIFICATION (never became active)",
+                "Mission state", String.valueOf(bad.getState()),
+                "Elapsed time", String.valueOf(bad.getElapsedTime()),
+                "Colony active mission", activeMission(w.colony));
+        resources(w, "AFTER (nothing consumed)", ResourceType.FUEL, ResourceType.BATTERY_POWER);
 
         section("2b. Another mission already active");
         World w2 = buildWorld();
@@ -287,7 +312,10 @@ public class Main {
         RepairMission repair = new RepairMission(99, "REP-1", 2);
         repair.setTargetFacility(w.lab);
         submit(w, repair, w.engineer, w.repairBot);
-        resources(w, "AFTER (nothing consumed)", ResourceType.SPARE_PARTS);
+        System.out.println(line('-'));
+        row("Mission cannot be executed. Reason: " + repair.getFailureReason());
+        System.out.println(line('-'));
+        resources(w, "AFTER (nothing consumed, never negative)", ResourceType.SPARE_PARTS);
 
         section("3b. All-or-nothing consumption across facilities");
         resources(w, "OXYGEN BEFORE", ResourceType.OXYGEN);
@@ -305,10 +333,38 @@ public class Main {
         section("4a. Responders available -> RESOLVED (single oxygen loss)");
         World w = buildWorld();
         resources(w, "BEFORE", ResourceType.OXYGEN, ResourceType.SPARE_PARTS, ResourceType.BATTERY_POWER);
-        emergency(w, new OxygenLeakEmergency("EM-OL1", w.habitat, 50,
-                cost(ResourceType.SPARE_PARTS, 2, ResourceType.BATTERY_POWER, 5)));
-        resources(w, "AFTER", ResourceType.OXYGEN, ResourceType.SPARE_PARTS, ResourceType.BATTERY_POWER);
-        box("RECOVERY", "Habitat operational", String.valueOf(w.habitat.isOperational()));
+        OxygenLeakEmergency leak = new OxygenLeakEmergency("EM-OL1", w.habitat, 50,
+                cost(ResourceType.SPARE_PARTS, 2, ResourceType.BATTERY_POWER, 5));
+
+        box("STEP 1 - DETECT THE EMERGENCY",
+                "Emergency", leak.getEmergencyId(),
+                "Type", leak.getClass().getSimpleName(),
+                "State", String.valueOf(leak.getState()),
+                "Oxygen loss amount", String.valueOf(leak.getOxygenLossAmount()));
+
+        box("STEP 2 - LOCATE THE AFFECTED FACILITY",
+                "Facility", leak.getAffectedHabitat().getName(),
+                "Location", leak.getLocation(),
+                "Oxygen level", String.valueOf(w.habitat.getOxygenLevel()),
+                "Operational", String.valueOf(w.habitat.isOperational()));
+
+        System.out.println(line('-'));
+        row("STEP 3 - IDENTIFY SUITABLE RESPONDERS");
+        System.out.println(line('-'));
+        for (Agent a : w.colony.getAgents()) {
+            if (a.isAvailable() && a.canRespond(leak)) {
+                row(a.getName() + " (" + a.getClass().getSimpleName() + ")");
+            }
+        }
+        System.out.println(line('-'));
+
+        emergency(w, leak);
+        box("STEP 4 - PERFORM THE RESPONSE", "Outcome", String.valueOf(leak.getState()));
+        resources(w, "STEP 5 - RESOURCES CONSUMED (after)",
+                ResourceType.OXYGEN, ResourceType.SPARE_PARTS, ResourceType.BATTERY_POWER);
+        box("STEP 6 - FACILITY STATE UPDATED",
+                "Habitat operational", String.valueOf(w.habitat.isOperational()),
+                "Habitat oxygen", String.valueOf(w.habitat.getOxygenLevel()));
         agents(w, "RESPONDERS RELEASED");
 
         section("4b. No responders -> UNRESOLVED, double oxygen loss");
@@ -340,7 +396,11 @@ public class Main {
         World w = buildWorld();
         w.sim.changeEnvironment(EnvironmentCondition.DUST_STORM);
         box("ENVIRONMENT", "Condition", String.valueOf(w.colony.getEnvironment()));
-        submit(w, exploration("EXP-1", 3), w.scientist, w.rover);
+        ExplorationMission blocked = exploration("EXP-1", 3);
+        submit(w, blocked, w.scientist, w.rover);
+        System.out.println(line('-'));
+        row("Exploration Mission cannot start. Reason: " + blocked.getFailureReason());
+        System.out.println(line('-'));
         resources(w, "RESOURCES UNTOUCHED", ResourceType.FUEL, ResourceType.BATTERY_POWER);
 
         section("5b. Dust storm hits a mission already IN_PROGRESS");
@@ -376,83 +436,6 @@ public class Main {
         agents(w, "AGENTS AFTER REPAIR");
     }
 
-    private static void scenario7() {
-        banner("SCENARIO 7: Laboratory Fire");
-        World w = buildWorld();
-        w.scientist.setLocation(w.lab.getLocation());
-        int before = w.scientist.getHealth();
-
-        emergency(w, new FireEmergency("EM-F1", w.lab, 20,
-                cost(ResourceType.SPARE_PARTS, 1, ResourceType.MEDICAL_SUPPLIES, 2)));
-
-        box("FIRE IMPACT AND RECOVERY",
-                "Scientist health before", String.valueOf(before),
-                "Scientist health after", String.valueOf(w.scientist.getHealth()),
-                "Lab oxygen", String.valueOf(w.lab.getResourceAmount(ResourceType.OXYGEN)),
-                "Lab operational", String.valueOf(w.lab.isOperational()),
-                "Lab on fire", String.valueOf(w.lab.isOnFire()));
-        System.out.println(line('-'));
-        row("LAB EQUIPMENT");
-        System.out.println(line('-'));
-        for (Equipment e : w.lab.getEquipmentList()) {
-            kv(e.getName(), e.isDamaged() ? "DAMAGED" : "INTACT");
-        }
-        System.out.println(line('-'));
-    }
-
-    private static void scenario8() {
-        banner("SCENARIO 8: Medical Emergency");
-
-        section("8a. Medical officer available -> patient healed");
-        World w = buildWorld();
-        w.scientist.takeDamage(50);
-        int before = w.scientist.getHealth();
-        resources(w, "BEFORE", ResourceType.MEDICAL_SUPPLIES, ResourceType.OXYGEN);
-        emergency(w, new MedicalEmergency("EM-M1", w.scientist, w.habitat, 30,
-                cost(ResourceType.MEDICAL_SUPPLIES, 2, ResourceType.OXYGEN, 5)));
-        box("PATIENT VITALS",
-                "Health before", String.valueOf(before),
-                "Health after", String.valueOf(w.scientist.getHealth()));
-        resources(w, "AFTER", ResourceType.MEDICAL_SUPPLIES, ResourceType.OXYGEN);
-
-        section("8b. Medical officer busy -> UNRESOLVED, nothing consumed");
-        World w2 = buildWorld();
-        w2.scientist.takeDamage(50);
-        int before2 = w2.scientist.getHealth();
-        w2.medic.setAvailable(false);
-        emergency(w2, new MedicalEmergency("EM-M2", w2.scientist, w2.habitat, 30,
-                cost(ResourceType.MEDICAL_SUPPLIES, 2, ResourceType.OXYGEN, 5)));
-        box("PATIENT VITALS",
-                "Health before", String.valueOf(before2),
-                "Health after", String.valueOf(w2.scientist.getHealth()));
-        resources(w2, "AFTER", ResourceType.MEDICAL_SUPPLIES, ResourceType.OXYGEN);
-    }
-
-    private static void scenario9() {
-        banner("SCENARIO 9: Communication Disruption and Rescue");
-        World w = buildWorld();
-        w.scientist.setLocation("Martian Surface");
-
-        section("9a. Communication disrupted -> rescue rejected");
-        box("COMMUNICATION",
-                "Comm station (normal)", String.valueOf(w.colony.hasActiveCommunicationStation()));
-        w.sim.changeEnvironment(EnvironmentCondition.COMMUNICATION_DISRUPTION);
-        box("COMMUNICATION",
-                "Environment", String.valueOf(w.colony.getEnvironment()),
-                "Comm station (disrupted)", String.valueOf(w.colony.hasActiveCommunicationStation()));
-        submit(w, new RescueMission(w.scientist, "RES-1", 2), w.rover, w.medic);
-
-        section("9b. Communication restored -> rescue succeeds");
-        w.sim.changeEnvironment(EnvironmentCondition.NORMAL);
-        RescueMission rescue = new RescueMission(w.scientist, "RES-2", 2);
-        if (submit(w, rescue, w.rover, w.medic)) {
-            tick(w, rescue, 2);
-        }
-        box("POST-RESCUE",
-                "Rescued", w.scientist.getName(),
-                "Location", w.scientist.getLocation());
-    }
-
     // ------------------------------------------------------------------
     // Runner
     // ------------------------------------------------------------------
@@ -465,10 +448,7 @@ public class Main {
                 case 4: scenario4(); break;
                 case 5: scenario5(); break;
                 case 6: scenario6(); break;
-                case 7: scenario7(); break;
-                case 8: scenario8(); break;
-                case 9: scenario9(); break;
-                default: box("RUNNER WARNING", "Invalid scenario", number + " (valid: 1-9)");
+                default: box("RUNNER WARNING", "Invalid scenario", number + " (valid: 1-6)");
             }
         } catch (RuntimeException ex) {
             box("SCENARIO CRASHED", "Scenario", String.valueOf(number), "Error", ex.toString());
@@ -482,7 +462,7 @@ public class Main {
         System.out.println(line('='));
 
         if (args.length == 0) {
-            for (int i = 1; i <= 9; i++) {
+            for (int i = 1; i <= 6; i++) {
                 run(i);
             }
         } else {
