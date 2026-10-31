@@ -123,14 +123,14 @@ public abstract class Mission {
         return;
     }
     this.elapsedTime++;
-    for (Agent agent : assignedAgents) {                       // جديد
+    for (Agent agent : assignedAgents) {                   
         if (agent instanceof RoboticUnit) {
             ((RoboticUnit) agent).consumeBattery(5);
         } else if (agent instanceof CrewMember) {
             ((CrewMember) agent).increaseFatigue(5);
         }
     }
-    for (Agent agent : assignedAgents) {                       // جديد
+    for (Agent agent : assignedAgents) {                     
         if (agent instanceof RoboticUnit && ((RoboticUnit) agent).getBatteryLevel() == 0) {
             fail("Battery depleted: " + agent.getName());
             return;

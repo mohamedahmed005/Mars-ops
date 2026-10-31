@@ -140,17 +140,16 @@ public boolean consumeResourcesAtomically(
         }
     mission.assignAgents(assignedAgents);
 
-    // Mission-specific checks (environment, equipment, vehicle, resources).
-    // validateRequirements() already calls mission.fail(reason) when it rejects.
+    
     if (!mission.validateRequirements(this)) {
         return false;}
 
-    // All-or-nothing consumption of the mission's resources.
+    
     if (!consumeResourcesAtomically(mission.getRequiredResources())) {
         mission.fail("Insufficient resources to start the mission");
         return false;}
 
-    // Agents stay busy until the mission completes or fails.
+   
     mission.reserveAgents();
     this.activeMission = mission;
     return true;}

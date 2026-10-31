@@ -67,21 +67,21 @@ public class FireEmergency extends Emergency {
         try {
     dispatchResponders(selectedResponders);
 
-    // Apply fire consequences
+
     affectedLab.setOperational(false);
     affectedLab.setOnFire(true);
     affectedLab.damageAllEquipment();
     affectedLab.deductResource(ResourceType.OXYGEN, oxygenConsumedByFire);
 
-    // Injure crew members present in the lab
+
     for (CrewMember patient : injuredCrew) {
         patient.takeDamage(25);}
-    // Consume required resources
+  
     consumeRequiredResources(colony);
-    // Treat injured crew
+
     for (CrewMember patient : injuredCrew) {
         patient.heal(15);}
-    // Finish handling the fire
+
     affectedLab.setOnFire(false);
     affectedLab.setOperational(true);
     markResolved();}

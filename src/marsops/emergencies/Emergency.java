@@ -33,7 +33,7 @@ public abstract class Emergency {
         this.requiredResources.putAll(requiredResources);
     }
 
-    // Getters
+  
     public String getEmergencyId() {return emergencyId;}
     public String getLocation() {return location;}
     public EmergencyState getState() {return state;}
@@ -41,7 +41,6 @@ public abstract class Emergency {
     public List<Agent> getResponders() {return new ArrayList<>(responders);}
     public Map<ResourceType, Integer> getRequiredResources() {return new EnumMap<>(requiredResources);}
 
-    //setters
     protected void setState(EmergencyState state) {this.state = state;}
     protected void setUnresolvedReason(String reason) {this.unresolvedReason = reason;}
     protected void markResolved() {
@@ -55,12 +54,12 @@ public abstract class Emergency {
     public abstract void handle(MarsColony colony);
 
 
-    // Dispatch responders
+   
     protected void dispatchResponders(List<Agent> selectedResponders) {
 
     if (selectedResponders == null || selectedResponders.isEmpty()) {
         throw new IllegalArgumentException("Responders list cannot be null or empty");}
-    // Validate all responders before dispatching any of them
+    
     for (Agent agent : selectedResponders) {
         if (agent == null || !agent.isAvailable()) {
             throw new IllegalArgumentException("All responders must be available");}}
@@ -73,7 +72,7 @@ public abstract class Emergency {
             responders.add(agent);}}
     }
 
-    // Release responders after the response is finished
+    
     protected void releaseResponders() {
         for (Agent agent : responders)
         {
@@ -82,7 +81,7 @@ public abstract class Emergency {
         responders.clear();
     }
 
-    // Check if all required resources are available
+   
     protected boolean hasSufficientResources(MarsColony colony) {
         for (Map.Entry<ResourceType, Integer> entry
                 : requiredResources.entrySet())
@@ -95,7 +94,7 @@ public abstract class Emergency {
         return true;
     }
 
-    // Consume all required resources atomically
+   
     protected void consumeRequiredResources(MarsColony colony)
     {
         boolean consumed =colony.consumeResourcesAtomically(requiredResources);
@@ -103,7 +102,7 @@ public abstract class Emergency {
             throw new IllegalStateException("Insufficient resources to handle emergency");}
     }
 
-    // Display emergency information
+    
     @Override
     public String toString() {
         return String.format

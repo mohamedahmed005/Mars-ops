@@ -58,7 +58,7 @@ public abstract class Facility {
         }
 
         public int getResourceAmount(ResourceType type){
-            //resources.getOrDefault(key,defaultValue)
+
            return this.resources.getOrDefault(type,0);
         }
 
