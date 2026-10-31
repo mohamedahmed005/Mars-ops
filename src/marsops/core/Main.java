@@ -24,15 +24,10 @@ import marsops.missions.ExplorationMission;
 import marsops.missions.Mission;
 import marsops.missions.RepairMission;
 
-/**
- * MARS-OPS demo runner.
- * Usage: no arguments = run all scenarios, or pass scenario numbers (e.g. 1 4 6).
- */
+
 public class Main {
 
-    // ------------------------------------------------------------------
-    // Layout helpers (every box is the same width)
-    // ------------------------------------------------------------------
+
     private static final int WIDTH = 78;
     private static final int KEY_WIDTH = 26;
 
@@ -88,9 +83,7 @@ public class Main {
         System.out.println(line('-'));
     }
 
-    // ------------------------------------------------------------------
-    // World setup
-    // ------------------------------------------------------------------
+
     private static class World {
         MarsColony colony;
         Simulation sim;
@@ -158,9 +151,6 @@ public class Main {
         return w;
     }
 
-    // ------------------------------------------------------------------
-    // Scenario helpers
-    // ------------------------------------------------------------------
     private static Map<ResourceType, Integer> cost(Object... pairs) {
         Map<ResourceType, Integer> map = new EnumMap<>(ResourceType.class);
         for (int i = 0; i + 1 < pairs.length; i += 2) {
@@ -243,9 +233,7 @@ public class Main {
         System.out.println(line('-'));
     }
 
-    // ------------------------------------------------------------------
-    // Scenarios
-    // ------------------------------------------------------------------
+
         private static void scenario1() {
         banner("SCENARIO 1: Successful Exploration Mission");
         World w = buildWorld();
@@ -444,9 +432,7 @@ public class Main {
         agents(w, "AGENTS AFTER REPAIR");
     }
 
-    // ------------------------------------------------------------------
-    // Runner
-    // ------------------------------------------------------------------
+
     private static void run(int number) {
         try {
             switch (number) {
