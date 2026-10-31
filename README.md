@@ -7,8 +7,8 @@ Alexandria University, Faculty of Engineering, Computer and Communication Engine
 |---|---|
 | `<mohamed raouf>` | Facilities, equipment, resources (package `facilities`) |
 | `<karim mohamed>` | Personnel and robots (package `agents`) |
-| `<mahmoud alaa>`  |  missions, simulation (packages `core`, `missions`) |
-| `<mohamed ahmed>` | Emergencies, demonstration,Colony,`Main` (package `emergencies`, `core.Main`) |
+| `<mahmoud alaa>`  |  missions,  (packages `core`, `missions`) |
+| `<mohamed ahmed>` | Emergencies,simulation, demonstration,Colony,`Main` (package `emergencies`, `core.Main`) |
 
 ---
 
